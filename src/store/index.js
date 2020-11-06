@@ -1,28 +1,253 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import { BootstrapVue} from 'bootstrap-vue'
-
+import db from "@/firebase/init"
+import createPersistedState from 'vuex-persistedstate'
+//import testOne from "@/firebase/init"
 Vue.use(Vuex);
+Vue.use(db)
 Vue.use(BootstrapVue)
 export default new Vuex.Store({
+  plugins: [createPersistedState({
+    storage: window.sessionStorage,
+})],
   state: {
-    products:[
-      {text:"Pytanie 1",a:"ksjh",b:"ahsfagfs",c:"hhgsfdfsa",correct:"a", file:"E.mp3"},
-      {text:"Pytanie 2",a:"aaa",b:"bbb",c:"cccc",correct:"b",file:"C.mp3"},
-      {text:"Pytanie 3",a:"zxxc",b:"asdads",c:"sss",correct:"c",file:"D.mp3"},
-      {text:"Pytanie 4",a:"ede",b:"sss",c:"qaz",correct:"a"},
-    ],
+    products:[],
+    intervals1:[],
+    DBases:[],
+    triads:[],
+    exercises:[],
+    triadIds:[],
+    intervalsT:[],
     goodA:0,
-    badA:0
+    badA:0,
+    alertV:false,
+    triadExVisibility: false,
+    updateBox:0,
+    c:0,
+    d:1,
+    tNumber:0,
+  exerTest:[],
   },
-  mutations: {
-    increaseGA: state =>{
-        state.goodA++;
+    actions: {
+   
     },
-    increaseBA: state =>{
-      state.badA++;
+    
+    mutations: {
+      TEtrue (state) {
+        state.triadExVisibility =  true;
+      },
+      cIncrease(state) {
+        console.log("INCR c")
+        state.c+=1;
+      },
+      dIncrease(state) {
+        state.d+=1;
+      },
+      increaseTnumber(state) {
+        state.tNumber+=1;
+      },
+      cReset(state){
+        state.c=0;
+      },
+       tNumberReset(state){
+        state.tNumber=0;
+      },
+      dReset(state){
+        state.d = 1;
+      },
+      TEfalse (state) {
+        state.triadExVisibility =  false;
+      },
+      increaseGA: state =>{
+          state.goodA++;
+      },
+      UpdateBox(state) {
+        state.updateBox++;
+        console.log("BOX");
+      },
+      exerFilter(state){
+        state.exerTest = [];
+        state.exercises.forEach(id=>{
+
+            console.log(id["qid"]);
+            if(id["qid"]==="emin"){
+              state.exerTest.push(id);
+              console.log("yes");
+            }
+        })
+      },
+      sound:()=>{
+          // console.log(text);
+          let audio1 = document.getElementById('titleSong').textContent;
+           let aud = new Audio(audio1);
+           aud.play();
+           console.log("end sound");
+       },
+      komunikat:()=>{
+        console.log("jasgdjahdg");
+        },
+        fetchProducts:(state)=>{
+          console.log("gasfag");
+          console.log(state);
+          db.collection("testOne").get().then(snapshot=>{
+        snapshot.forEach(doc => {
+          console.log(doc.data()+doc.id);
+          let product = doc.data();
+          product.id = doc.id;
+          state.products.push(product);
+        });
+        
+          })
+        },
+        fetchTriads:(state)=>{
+          db.collection("triads").get().then(snapshot=>{
+        snapshot.forEach(doc => {
+          console.log(doc.data()+doc.id);
+          let triad = doc.data();
+          triad.id = doc.id;
+          state.triads.push(triad);
+        });
+        
+          })
+        },
+        fetchIntervalsT:(state)=>{
+          db.collection("intervalsT").get().then(snapshot=>{
+        snapshot.forEach(doc => {
+          console.log(doc.data()+doc.id);
+          let i = doc.data();
+          i.id = doc.id;
+          state.intervalsT.push(i);
+        });
+        
+          })
+        },
+        fetchInt1:(state)=>{
+          console.log("gasfag");
+          db.collection("intervals1").get().then(snapshot=>{
+        snapshot.forEach(doc => {
+          console.log(doc.data()+doc.id);
+          let interval = doc.data();
+          interval.id = doc.id;
+          state.intervals1.push(interval);
+        });
+        
+          })
+        },  
+        qfilter:(state, qid)=>{
+          console.log("qfilter function");
+          db.collection("triadsE").get().where("qid","==",qid).then(snapshot=>{
+        snapshot.forEach(doc => {
+          console.log(doc.data()+doc.id);
+          let e = doc.data();
+          e.id = doc.id;
+          state.exercises.push(e);
+        });
+        
+          })
+        },  
+
+
+        fetchExercises:(state)=>{
+          //console.log("gasfag");
+          db.collection("triadsE").get().then(snapshot=>{
+        snapshot.forEach(doc => {
+          console.log(doc.data()+doc.id);
+          let e = doc.data();
+          e.id = doc.id;
+          state.exercises.push(e);
+        });
+        
+          })
+        },
+        fetchTid:(state)=>{
+          //console.log("gasfag");
+          console.log("dodaje idiki")
+          db.collection("Triandid").get().then(snapshot=>{
+        snapshot.forEach(doc => {
+          console.log(doc.data()+doc.id);
+          let e = doc.data();
+          e.id = doc.id;
+          state.triadIds.push(e);
+        });
+        
+          })
+        },
+        
+        
+        fetchDB:(state)=>{
+          console.log("gasfag");
+          db.collection("testOne","intervals1").get().then(snapshot=>{
+        snapshot.forEach(doc => {
+          console.log(doc.data()+doc.id);
+          let DB = doc.data();
+          DB.id = doc.id;
+          state.DBases.push(DB);
+        });
+        
+          })
+        },
+      increaseBA: state =>{
+        state.badA++;
+    },
+   resetBA: state =>{
+      state.badA=0;
   },
+  resetGA: state =>{
+    state.goodA=0;
   },
-  actions: {},
+  setCategories(state, val) {
+    state.products = val;
+  },
+    },
+   mounted: function(){
+    console.log("hfahtdf");
+    console.log(this.state["products"]);
+   },
+
+   getters: {
+    // ...
+
+    getExercisesById: (state) => (id) => {
+      return state.exercises.find(todo => todo.id === id)
+    },
+    getData: (state) => (id) => {
+      //return state.find(state => state.object == dataName);
+     return  state.products.find(product => product.a === id)
+    },
+    selectedItem: state => {
+      return state.products.find(
+        item => item.id == state.selectedId
+      );
+    },
+    search(state) {
+      return k => state.intervals1.filter(product =>{
+        return product.chapter === k
+      });
+    },
+    searchData(state) {
+      return k => state.filter(product =>{
+        return product === k
+      });
+    },
+  }
+  });
+
+  //store.dispatch("fetchCategories");
+  
+ // export default store;
+
+
+/*
+    getDatabase: function(){
+      console.log("hzfhf");
+      firebase.collection("testOne").get().then(snapshot => {
+        snapshot.forEach(doc => {
+            console.log("fgdfgdg"+doc);
+        })
+      })
+    },
+  },
   modules: {}
 });
+*/

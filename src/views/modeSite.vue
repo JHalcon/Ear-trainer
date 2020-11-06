@@ -2,8 +2,8 @@
   <div class="container">
    <!-- <mainBanner></mainBanner>-->
     <div id="main">
-      <menuCard title="Train mode" imageLink="covers/trainmode.png" destination="trainMode"></menuCard>
-       <menuCard title="Test mode"  imageLink="covers/testmode.png" destination="testOne"></menuCard>
+      <menuCard title="Learn material" destination="ILBox"></menuCard>
+      <menuCard title="Train intervals" imageLink="https://picsum.photos/600/300/?image=25" destination="trainModeTest" chapter="I1"></menuCard>
       </div>
   </div>
 </template>
@@ -16,7 +16,7 @@ import menuCard from "../components/menuCard.vue";
 import db from "@/firebase/init"
 //import VueFire from "VueFire"
 export default {
-  name: "Home",
+  name: "modeSite",
   components: {
    // mainBanner,
     menuCard
@@ -43,8 +43,5 @@ padding-top:10vh;
 justify-content: space-around;
 height:88vh;
 background-color: rgba(255, 255, 255, 0.7);
-}
-.card-img{
-  border:5px solid black !important;
 }
 </style>
