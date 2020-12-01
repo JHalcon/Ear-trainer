@@ -1,13 +1,15 @@
 <template>
 <div id="prl1" class="container p-2">
   <div class="innerContainer">
-    <h3 class="text-center">Test I</h3>
+    <h3 class="text-center white-font">Test I</h3>
         <div  class="qbox" v-for="product in products.slice(a,b)" :key="product.id">
           <h4 class="question">{{product.text}}</h4>
           <div id="audio" class="player-wrapper">
+            
 <!--	<audio-player file='product.file'></audio-player>-->
 </div>
-           <audio id="id1" v-bind:src="product.file"> </audio><p id="titleSong">{{ product.file }}</p> <button v-on:click="opop">Play</button>
+          <audioPlayerbtn v-bind:fileName="product.file" />
+          <!-- <audio id="id1" v-bind:src="product.file"> </audio><p id="titleSong">{{ product.file }}</p> <button v-on:click="opop" class="btn btn-primary">Play</button>-->
             <button class="btn btn-primary m-2 ansBtn" v-on:click="selectAnswer" value="a">{{product.a}}</button>
             <button class="btn btn-primary m-2 ansBtn" v-on:click="selectAnswer" value="b"> {{product.b}}</button>
             <button class="btn btn-primary m-2 ansBtn" v-on:click="selectAnswer" value="c"> {{product.c}}</button>
@@ -15,10 +17,10 @@
         </div>
          <div id="gameResoult" v-if="endList">
     <h2>Your game resoult:</h2>
-    <span>Good answers: {{goodA}}</span>
-    <span>Bad answers: {{badA}}</span>
+    <span class="ga-font">Good answers: {{goodA}}</span>
+    <span class="ba-font">Bad answers: {{badA}}</span>
     </div>
-    <div class="buttons">
+    <div class="buttons" id="testBtnBox">
       <button id="nextItem" class="btn btn-dark" v-on:click="nextQuestion" >Next</button>
 
       </div>
@@ -32,7 +34,7 @@
 <script>
 // @ is an alias to /src
 
-
+import audioPlayerbtn from "../components/audioPlayerbtn.vue";
 export default {
     computed:{
     products(){
@@ -51,7 +53,7 @@ export default {
   name:"testOne",
   selected:'',
   components: {
-
+ audioPlayerbtn,
   },
     data(){
     return{
@@ -177,12 +179,21 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top:40px;
+  margin-top:20px;
 }
 span{
   display:flex;
-  background-color: cornflowerblue;
-  border: 2px solid white;
+  font-size:1.5em;
+}
+.ga-font{
+  color:green;
+}
+.ba-font{
+  color:red;
+}
+.white-font{
+  color:honeydew;
+  font-weight: bold;
 }
 .buttons{
   background-color: darkgray;
@@ -196,11 +207,16 @@ span{
 span #answer{
   display:hidden;
 }
+#testBtnBox{
+ // margin-top:20vh;
+}
 #gameResoult{
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+ margin-top:40px;
+ margin-bottom: 10vh;
 }
 #prl1{
   background-color: rgba(255, 255, 255, 0.7);

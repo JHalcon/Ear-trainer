@@ -2,8 +2,8 @@
   <div class="container">
    <!-- <mainBanner></mainBanner>-->
     <div id="main">
-      <menuCard title="Learn material" destination="ILBox"></menuCard>
-      <menuCard title="Train intervals" imageLink="https://picsum.photos/600/300/?image=25" destination="trainModeTest" chapter="I1"></menuCard>
+      <menuCard title="Learn material" imageLink="covers/LI.png" destination="ILBox"></menuCard>
+      <menuCard title="Train intervals" imageLink="covers/TI.png" destination="trainModeTest" chapter="I1"></menuCard>
       </div>
   </div>
 </template>

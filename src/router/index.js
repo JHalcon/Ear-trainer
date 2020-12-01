@@ -7,6 +7,7 @@ import trainMode from "../views/trainMode.vue";
 import trainModeTest from "../views/trainModeTest.vue";
 import  noteInContext from "../views/noteInContext.vue";
 import  modeSite from "../views/modeSite.vue";
+import  intervalDicSite from "../views/IntervalDicSite.vue";
 
 Vue.use(VueRouter);
 const routes = [
@@ -47,19 +48,25 @@ const routes = [
     props:true
   }, 
   {
-    path: "noteInContext",
+    path: "/noteInContext",
     name: "noteInContext",
     component:noteInContext ,
     props:true
   }, 
   {
-    path: "modeSite",
+    path: "/modeSite",
     name: "modeSite",
     component: modeSite ,
     props:true
   }, 
   {
-    path: "ILBox",
+    path: "/intervalDicSite",
+    name: "intervalDicSite",
+    component: intervalDicSite ,
+    props:true
+  }, 
+  {
+    path: "/ILBox",
     name: "ILBox",
     component: ILBox ,
     //props:true

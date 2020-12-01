@@ -2,9 +2,9 @@
   <div class="container">
    <!-- <mainBanner></mainBanner>-->
     <div id="main">
-      <menuCard title="Intervals chapter 1" destination="modeSite"></menuCard>
-      <menuCard title="Note in context chapter 1" destination="noteInContext"></menuCard>
-      <menuCard title="Intervals chapter 1" imageLink="https://picsum.photos/600/300/?image=25" destination="trainModeTest" chapter="I1"></menuCard>
+      <menuCard title="Intervals chapter 1" imageLink="covers/I1.png" destination="modeSite"></menuCard>
+      <menuCard title="Note in context chapter 1" imageLink="covers/ftic.png" destination="noteInContext"></menuCard>
+      <menuCard title="Intervals chapter 2" imageLink="covers/I1.png" destination="trainModeTest" chapter="I1"></menuCard>
        
       </div>
   </div>

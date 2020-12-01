@@ -7,8 +7,7 @@
 </div>      <h2>{{e.text}}</h2>
            <audio id="id1" v-bind:src="e.file"> </audio><p id="titleSongE">{{ e.file }}</p> 
            <button v-on:click="opop" class=" btn btn-dark">Play</button>
-           <span> {{qid}}</span>
-           <span>{{e.qid}}</span>
+           <span class="invisible"> {{qid}} {{e.qid}}</span>
             <button class="btn btn-primary m-2 ansBtn" v-on:click="selectAnswer" value="a">{{e.a}}</button>
             <button class="btn btn-primary m-2 ansBtn" v-on:click="selectAnswer" value="b"> {{e.b}}</button>
             <button class="btn btn-primary m-2 ansBtn" v-on:click="selectAnswer" value="c"> {{e.c}}</button>
@@ -250,8 +249,7 @@ this.Fetchquestions();
 }
 span{
   display:flex;
-  background-color: cornflowerblue;
-  border: 2px solid white;
+  font-size:20px;
 }
 .buttons{
   background-color: darkgray;

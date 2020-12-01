@@ -1,19 +1,18 @@
 <template>
 <div id="keyBox">
-  <!--  <button class="btn btn-primary" @click="playTriad(FN,SN,TN)">Play</button>
-    -->
-    
+  <!--
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg8"
-   version="1.1"
-   viewBox="0 0 188.04315 97.895828"
+   width="188.04315mm"
    height="97.895828mm"
-   width="188.04315mm">
+   viewBox="0 0 188.04315 97.895828"
+   version="1.1"
+   style="transform: scale(1.5)"
+   id="svg8">
   <defs
      id="defs2" />
   <metadata
@@ -29,379 +28,375 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-58.302825,-115.19346)"
-     id="layer1">
+     id="layer1"
+     transform="translate(-58.302825,-115.19346)">
     <g
-       transform="matrix(2.4689826,0,0,2.6979167,-3.2894767,-189.47036)"
-       id="layer1-5">
+       id="layer1-5"
+       transform="matrix(2.4689826,0,0,2.6979167,-3.2894767,-189.47036)">
       <rect
-         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.70886797;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect3848"
-         width="76.162201"
-         height="36.285713"
+         y="112.92558"
          x="24.94643"
-         y="112.92558" />
+         height="36.285713"
+         width="76.162201"
+         id="rect3848"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.70886797;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="C"
-         width="6.8035712"
-         height="21.072172"
+         class="white"
+         y="120.8631"
          x="35.529758"
-         y="120.8631" 
-         class="white"/>
-      <rect
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="D"
-         width="6.8035712"
          height="21.072172"
+         width="6.8035712"
+         id="C"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         class="white"
+         y="120.8631"
          x="43.391663"
-         y="120.8631" 
-        class="white"/>
-      <rect
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="E"
-         width="6.8035712"
          height="21.072172"
+         width="6.8035712"
+         id="D"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         class="white"
+         y="120.8631"
          x="51.253567"
-         y="120.8631" 
-         class="white"/>
-      <rect
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="F"
-         width="6.8035712"
          height="21.072172"
+         width="6.8035712"
+         id="E"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         class="white"
+         y="120.8631"
          x="59.115471"
-         y="120.8631" 
-         class="white"/>
-      <rect
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="G"
-         width="6.8035712"
          height="21.072172"
+         width="6.8035712"
+         id="F"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         class="white"
+         y="120.8631"
          x="66.977379"
-         y="120.8631" 
-         class="white"/>
-      <rect
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="A"
-         width="6.8035712"
          height="21.072172"
+         width="6.8035712"
+         id="G"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         class="white"
+         y="120.8631"
          x="74.839287"
-         y="120.8631"
-         class="white" />
-      <rect
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="H"
-         width="6.8035712"
          height="21.072172"
-         x="82.701195"
+         width="6.8035712"
+         id="A"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         class="white"
          y="120.8631"
-         class="white" />
+         x="82.701195"
+         height="21.072172"
+         width="6.8035712"
+         id="H"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
-         style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="C#"
-         width="5.3453903"
-         height="13.016112"
+         class="black"
+         y="120.81584"
          x="40.239578"
-         y="120.81584"
-         class="black"  />
-      <rect
-         style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="D#"
-         width="5.3453903"
          height="13.016112"
+         width="5.3453903"
+         id="C#"
+         style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         class="black"
+         y="120.81584"
          x="48.175335"
-         y="120.81584" 
-         class="black" />
-      <rect
-         style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="F#"
-         width="5.3453903"
          height="13.016112"
+         width="5.3453903"
+         id="D#"
+         style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         class="black"
+         y="120.81584"
          x="63.671589"
-         y="120.81584"
-         class="black"  />
-      <rect
-         style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="G#"
-         width="5.3453903"
          height="13.016112"
+         width="5.3453903"
+         id="F#"
+         style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         class="black"
+         y="120.81584"
          x="71.561417"
-         y="120.81584"
-         class="black" />
-      <rect
-         style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="A#"
-         width="5.3453903"
          height="13.016112"
-         x="79.445869"
+         width="5.3453903"
+         id="G#"
+         style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         class="black"
          y="120.81584"
-         class="black" />
+         x="79.445869"
+         height="13.016112"
+         width="5.3453903"
+         id="A#"
+         style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,34.206845,58.775303)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-         id="flowPara3887">C</flowPara></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,53.519703,58.604447)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-7"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-6"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-9" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-         id="flowPara3887-6">D</flowPara></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,73.290275,58.698941)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-7-1"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-6-6"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-9-1" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-         id="flowPara3887-6-7">E</flowPara></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,92.679475,58.698941)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-7-1-9"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-6-6-1"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-9-1-0" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-         id="flowPara3887-6-7-0">F</flowPara></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,111.85164,58.793435)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-7-1-9-5"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-6-6-1-6"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-9-1-0-7" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-         id="flowPara3887-6-7-0-0">G</flowPara></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,131.35558,58.604447)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-7-1-9-5-6"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-6-6-1-6-8"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-9-1-0-7-5" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-         id="flowPara3887-6-7-0-0-1">A</flowPara></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,150.37581,58.604447)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-7-1-9-5-6-5"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-6-6-1-6-8-4"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-9-1-0-7-5-0" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-         id="flowPara3887-6-7-0-0-1-9">H</flowPara></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,42.998461,25.389787)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-9"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-8"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-3" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:0;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-         id="flowPara3887-0">C#</flowPara><flowPara
-         id="flowPara4061"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff" /></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,100.90916,25.364045)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-9-3"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-8-8"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-3-7" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:0;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-         id="flowPara3887-0-7">F#</flowPara><flowPara
-         id="flowPara4061-6"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff" /></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,62.446706,25.34378)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-9-3-8"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-8-8-9"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-3-7-7" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:0;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-         id="flowPara3887-0-7-6">D#</flowPara><flowPara
-         id="flowPara4061-6-3"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff" /></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,120.02265,25.340422)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-9-3-9"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-8-8-5"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-3-7-9" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:0;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-         id="flowPara3887-0-7-3">G#</flowPara><flowPara
-         id="flowPara4061-6-9"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff" /></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,139.91364,25.293175)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-9-3-9-3"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-8-8-5-8"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-3-7-9-6" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:0;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-         id="flowPara3887-0-7-3-8">A#</flowPara><flowPara
-         id="flowPara4061-6-9-7"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff" /></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,43.038289,33.668942)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-9-6"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-8-2"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-3-6" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:0;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-         id="flowPara3887-0-6">D<flowSpan
-   id="flowSpan4208"
-   style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">b</flowSpan></flowPara><flowPara
-         id="flowPara4061-4"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff" /></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,62.66965,33.706871)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-9-6-9"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-8-2-2"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-3-6-4" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:0;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-         id="flowPara3887-0-6-1"><flowSpan
-           id="flowSpan4208-1"
-           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><flowSpan
-   id="flowSpan4240"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">E</flowSpan>b</flowSpan></flowPara><flowPara
-         id="flowPara4061-4-6"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff" /></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,101.08325,33.935)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-9-6-9-0"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-8-2-2-5"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-3-6-4-1" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:0;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-         id="flowPara3887-0-6-1-5"><flowSpan
-           id="flowSpan4208-1-8"
-           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><flowSpan
-   id="flowSpan4275"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">G</flowSpan>b</flowSpan></flowPara><flowPara
-         id="flowPara4061-4-6-0"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff" /></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,120.69191,33.827463)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-9-6-9-0-7"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-8-2-2-5-6"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-3-6-4-1-0" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:0;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-         id="flowPara3887-0-6-1-5-7"><flowSpan
-           id="flowSpan4208-1-8-2"
-           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><flowSpan
-   id="flowSpan4310"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">A</flowSpan>b</flowSpan></flowPara><flowPara
-         id="flowPara4061-4-6-0-0"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff" /></flowRoot>    <flowRoot
-       transform="matrix(0.26458333,0,0,0.26458333,139.9137,33.822297)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot3881-9-6-9-0-2"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3883-8-2-2-5-67"><rect
-           y="442.51968"
-           x="205.71428"
-           height="121.52174"
-           width="115.46165"
-           id="rect3885-3-6-4-1-7" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:0;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-         id="flowPara3887-0-6-1-5-1"><flowSpan
-           id="flowSpan4208-1-8-29"
-           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><flowSpan
-   id="flowSpan4330"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">H</flowSpan>b</flowSpan></flowPara><flowPara
-         id="flowPara4061-4-6-0-2"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff" /></flowRoot>    <flowRoot
-       transform="scale(0.26458333)"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"
        id="flowRoot4336"
-       xml:space="preserve"><flowRegion
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="scale(0.26458333)"><flowRegion
          id="flowRegion4338"><rect
-           y="221.46361"
-           x="212.13203"
-           height="467.70062"
+           id="rect4340"
            width="289.91379"
-           id="rect4340" /></flowRegion><flowPara
-         id="flowPara4342"></flowPara></flowRoot>  </g>
+           height="467.70062"
+           x="212.13203"
+           y="221.46361" /></flowRegion><flowPara
+         id="flowPara4342" /></flowRoot>  </g>
+  <text
+     id="text5073"
+     y="72.056366"
+     x="30.491005"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.99444485px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#2a7fff;stroke-width:0.26458332"
+       y="72.056366"
+       x="30.491005"
+       id="tspan5071">C</tspan></text>
+  <text
+     id="text5073-2"
+     y="71.903793"
+     x="50.020096"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.99444485px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#2a7fff;stroke-width:0.26458332"
+       y="71.903793"
+       x="50.020096"
+       id="tspan5071-0">D</tspan></text>
+  <text
+     id="text5073-2-9"
+     y="71.956856"
+     x="69.631157"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.99444485px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#2a7fff;stroke-width:0.26458332"
+       y="71.956856"
+       x="69.631157"
+       id="tspan5071-0-5">E</tspan></text>
+  <text
+     id="text5073-2-9-7"
+     y="71.919334"
+     x="89.349297"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.99444485px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#2a7fff;stroke-width:0.26458332"
+       y="71.919334"
+       x="89.349297"
+       id="tspan5071-0-5-5">F</tspan></text>
+  <text
+     id="text5073-2-9-7-9"
+     y="72.038322"
+     x="108.09597"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.99444485px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#2a7fff;stroke-width:0.26458332"
+       y="72.038322"
+       x="108.09597"
+       id="tspan5071-0-5-5-7">G</tspan></text>
+  <text
+     id="text5073-2-9-7-9-2"
+     y="71.91317"
+     x="127.56982"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.99444485px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#2a7fff;stroke-width:0.26458332"
+       y="71.91317"
+       x="127.56982"
+       id="tspan5071-0-5-5-7-4">A</tspan></text>
+  <text
+     id="text5073-2-9-7-9-2-6"
+     y="71.825539"
+     x="146.53864"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.99444485px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#2a7fff;stroke-width:0.26458332"
+       y="71.825539"
+       x="146.53864"
+       id="tspan5071-0-5-5-7-4-9">H</tspan></text>
+  <text
+     id="text5073-6"
+     y="37.176941"
+     x="38.64547"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;stroke-width:0.26458332"
+       y="37.176941"
+       x="38.64547"
+       id="tspan5071-1">C#</tspan></text>
+  <text
+     id="text5073-6-3"
+     y="45.014275"
+     x="38.78186"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;stroke-width:0.26458332"
+       y="45.014275"
+       x="38.78186"
+       id="tspan5071-1-9">C<tspan
+   id="tspan5221"
+   style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">b</tspan></tspan></text>
+  <text
+     id="text5073-6-7"
+     y="37.123074"
+     x="57.967232"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;stroke-width:0.26458332"
+       y="37.123074"
+       x="57.967232"
+       id="tspan5071-1-3">D#</tspan></text>
+  <text
+     id="text5073-6-3-6"
+     y="44.910423"
+     x="58.459743"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;stroke-width:0.26458332"
+       y="44.910423"
+       x="58.459743"
+       id="tspan5071-1-9-5"><tspan
+         id="tspan5221-8"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"><tspan
+   id="tspan5262"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">E</tspan>b</tspan></tspan></text>
+  <text
+     id="text5073-6-7-1"
+     y="37.102314"
+     x="96.680313"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;stroke-width:0.26458332"
+       y="37.102314"
+       x="96.680313"
+       id="tspan5071-1-3-0">F#</tspan></text>
+  <text
+     id="text5073-6-3-6-9"
+     y="44.974407"
+     x="96.53479"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;stroke-width:0.26458332"
+       y="44.974407"
+       x="96.53479"
+       id="tspan5071-1-9-5-3"><tspan
+         id="tspan5221-8-1"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"><tspan
+   id="tspan5312"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">G</tspan>b</tspan></tspan></text>
+  <text
+     id="text5073-6-7-1-4"
+     y="37.11644"
+     x="116.1485"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;stroke-width:0.26458332"
+       y="37.11644"
+       x="116.1485"
+       id="tspan5071-1-3-0-3">G#</tspan></text>
+  <text
+     id="text5073-6-7-1-4-9"
+     y="37.074173"
+     x="135.80835"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;stroke-width:0.26458332"
+       y="37.074173"
+       x="135.80835"
+       id="tspan5071-1-3-0-3-6">A#</tspan></text>
+  <text
+     id="text5073-6-3-6-9-9"
+     y="45.026424"
+     x="116.33596"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;stroke-width:0.26458332"
+       y="45.026424"
+       x="116.33596"
+       id="tspan5071-1-9-5-3-3"><tspan
+         id="tspan5221-8-1-2"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"><tspan
+   id="tspan5378"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">A</tspan>b</tspan></tspan></text>
+  <text
+     id="text5073-6-3-6-9-9-2"
+     y="44.99424"
+     x="135.28429"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#808080;stroke-width:0.26458332"
+       y="44.99424"
+       x="135.28429"
+       id="tspan5071-1-9-5-3-3-2"><tspan
+         id="tspan5221-8-1-2-5"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"><tspan
+   id="tspan5404"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">H</tspan>b</tspan></tspan></text>
 </svg>
-<button class="btn btn-primary" @click="Play()">Play</button>
-    <span> {{qid}}</span>
-      
+-->
+<svg width="578" height="301" id="svg8" viewBox="0 0 578 301" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M578 0H0V301H578V0Z" fill="#4D4D4D"/>
+<path d="M131.95 65.8439H80.3176V240.643H131.95V65.8439Z" fill="white" id="C" class="white"/>
+<path d="M191.615 65.8439H139.982V240.643H191.615V65.8439Z" fill="white" id="D" class="white"/>
+<path d="M251.279 65.8439H199.647V240.643H251.279V65.8439Z" fill="white" id="E" class="white"/>
+<path d="M310.944 65.8439H259.311V240.643H310.944V65.8439Z" fill="white" id="F" class="white"/>
+<path d="M370.608 65.8439H318.976V240.643H370.608V65.8439Z" fill="white" id="G" class="white"/>
+<path d="M430.273 65.8439H378.64V240.643H430.273V65.8439Z" fill="white" id="A" class="white"/>
+<path d="M489.938 65.8439H438.305V240.643H489.938V65.8439Z" fill="white" id="H" class="white"/>
+<path d="M156.627 65.4519H116.061V173.424H156.627V65.4519Z" fill="#1A1A1A" id="C#" class="black"/>
+<path d="M216.852 65.4519H176.286V173.424H216.852V65.4519Z" fill="#1A1A1A" id="D#" class="black"/>
+<path d="M334.454 65.4519H293.888V173.424H334.454V65.4519Z" fill="#1A1A1A" id="F#" class="black"/>
+<path d="M394.331 65.4519H353.764V173.424H394.331V65.4519Z" fill="#1A1A1A" id="G#" class="black"/>
+<path d="M454.166 65.4519H413.6V173.424H454.166V65.4519Z" fill="#1A1A1A" id="A#" class="black"/>
+<path d="M100.301 196.505C100.242 197.314 99.9422 197.952 99.4013 198.417C98.8639 198.882 98.1542 199.114 97.2723 199.114C96.3077 199.114 95.548 198.79 94.9933 198.143C94.4421 197.492 94.1665 196.599 94.1665 195.466V195.006C94.1665 194.283 94.294 193.645 94.5489 193.094C94.8039 192.543 95.1673 192.121 95.6393 191.828C96.1147 191.532 96.6659 191.384 97.2929 191.384C98.1611 191.384 98.8605 191.616 99.391 192.081C99.9216 192.546 100.228 193.199 100.311 194.04H98.7606C98.7227 193.554 98.5866 193.203 98.3523 192.985C98.1215 192.765 97.7684 192.655 97.2929 192.655C96.7762 192.655 96.3886 192.841 96.1302 193.213C95.8753 193.581 95.7444 194.155 95.7375 194.934V195.502C95.7375 196.315 95.8598 196.909 96.1044 197.285C96.3524 197.66 96.7417 197.848 97.2723 197.848C97.7511 197.848 98.1077 197.74 98.342 197.523C98.5797 197.302 98.7158 196.963 98.7502 196.505H100.301Z" fill="#2A7FFF"/>
+<path d="M154.422 198.542V191.018H156.737C157.398 191.018 157.989 191.168 158.509 191.467C159.033 191.764 159.441 192.187 159.734 192.739C160.027 193.286 160.173 193.91 160.173 194.609V194.955C160.173 195.655 160.029 196.277 159.739 196.821C159.453 197.365 159.048 197.787 158.525 198.087C158.001 198.387 157.41 198.538 156.752 198.542H154.422ZM155.972 192.273V197.296H156.721C157.328 197.296 157.791 197.098 158.111 196.702C158.432 196.306 158.595 195.739 158.602 195.002V194.604C158.602 193.839 158.444 193.261 158.127 192.868C157.81 192.472 157.347 192.273 156.737 192.273H155.972Z" fill="#2A7FFF"/>
+<path d="M219.228 195.444H216.252V197.46H219.745V198.705H214.701V191.181H219.735V192.437H216.252V194.23H219.228V195.444Z" fill="#2A7FFF"/>
+<path d="M279.837 195.515H276.861V198.59H275.31V191.066H280.209V192.321H276.861V194.264H279.837V195.515Z" fill="#2A7FFF"/>
+<path d="M338.886 198.005C338.607 198.339 338.213 198.599 337.703 198.785C337.193 198.968 336.628 199.059 336.008 199.059C335.357 199.059 334.785 198.918 334.292 198.635C333.803 198.349 333.424 197.936 333.155 197.395C332.89 196.854 332.754 196.218 332.747 195.488V194.976C332.747 194.225 332.873 193.576 333.124 193.028C333.379 192.477 333.744 192.057 334.22 191.767C334.699 191.474 335.259 191.328 335.899 191.328C336.792 191.328 337.489 191.542 337.992 191.969C338.495 192.393 338.793 193.011 338.886 193.824H337.377C337.308 193.393 337.155 193.078 336.917 192.878C336.683 192.678 336.359 192.579 335.946 192.579C335.419 192.579 335.017 192.777 334.742 193.173C334.466 193.569 334.327 194.158 334.323 194.94V195.421C334.323 196.21 334.473 196.806 334.773 197.209C335.073 197.612 335.512 197.813 336.091 197.813C336.673 197.813 337.088 197.689 337.336 197.441V196.144H335.925V195.002H338.886V198.005Z" fill="#2A7FFF"/>
+<path d="M397.039 197.02H394.321L393.804 198.571H392.155L394.956 191.047H396.393L399.209 198.571H397.561L397.039 197.02ZM394.739 195.765H396.62L395.675 192.948L394.739 195.765Z" fill="#2A7FFF"/>
+<path d="M457.22 198.301H455.67V195.077H452.647V198.301H451.097V190.777H452.647V193.826H455.67V190.777H457.22V198.301Z" fill="#2A7FFF"/>
+<path d="M125.365 89.261C125.307 90.0706 125.007 90.7079 124.466 91.173C123.929 91.6381 123.219 91.8707 122.337 91.8707C121.373 91.8707 120.613 91.5468 120.058 90.8991C119.507 90.248 119.231 89.3557 119.231 88.2223V87.7624C119.231 87.0389 119.359 86.4016 119.614 85.8504C119.869 85.2991 120.232 84.8771 120.704 84.5843C121.18 84.288 121.731 84.1399 122.358 84.1399C123.226 84.1399 123.925 84.3724 124.456 84.8375C124.986 85.3026 125.293 85.9554 125.376 86.796H123.825C123.788 86.3103 123.651 85.9589 123.417 85.7418C123.186 85.5213 122.833 85.4111 122.358 85.4111C121.841 85.4111 121.453 85.5971 121.195 85.9692C120.94 86.3378 120.809 86.9114 120.802 87.69V88.2585C120.802 89.0715 120.925 89.6658 121.169 90.0413C121.417 90.4168 121.807 90.6046 122.337 90.6046C122.816 90.6046 123.173 90.4961 123.407 90.279C123.645 90.0585 123.781 89.7192 123.815 89.261H125.365ZM129.158 89.6486H128.161L127.789 91.7673H126.843L127.215 89.6486H126.042V88.7597H127.37L127.629 87.2921H126.43V86.393H127.789L128.166 84.2432H129.107L128.73 86.393H129.732L130.109 84.2432H131.055L130.678 86.393H131.809V87.2921H130.518L130.259 88.7597H131.417V89.6486H130.104L129.732 91.7673H128.786L129.158 89.6486ZM128.316 88.7597H129.313L129.572 87.2921H128.569L128.316 88.7597Z" fill="#808080"/>
+<path d="M125.785 113.358C125.726 114.168 125.426 114.805 124.885 115.27C124.348 115.736 123.638 115.968 122.756 115.968C121.792 115.968 121.032 115.644 120.477 114.997C119.926 114.345 119.651 113.453 119.651 112.32V111.86C119.651 111.136 119.778 110.499 120.033 109.948C120.288 109.397 120.651 108.975 121.123 108.682C121.599 108.385 122.15 108.237 122.777 108.237C123.645 108.237 124.345 108.47 124.875 108.935C125.406 109.4 125.712 110.053 125.795 110.893H124.245C124.207 110.408 124.071 110.056 123.836 109.839C123.606 109.619 123.253 109.508 122.777 109.508C122.26 109.508 121.873 109.695 121.614 110.067C121.359 110.435 121.229 111.009 121.222 111.787V112.356C121.222 113.169 121.344 113.763 121.589 114.139C121.837 114.514 122.226 114.702 122.756 114.702C123.235 114.702 123.592 114.593 123.826 114.376C124.064 114.156 124.2 113.817 124.234 113.358H125.785Z" fill="#808080"/>
+<path d="M178.849 91.6016V84.0776H181.164C181.826 84.0776 182.417 84.2274 182.937 84.5271C183.461 84.8234 183.869 85.2472 184.162 85.7984C184.454 86.3461 184.601 86.9697 184.601 87.6691V88.0153C184.601 88.7146 184.456 89.3365 184.167 89.8808C183.881 90.4251 183.476 90.8472 182.952 91.1469C182.429 91.4466 181.838 91.5982 181.18 91.6016H178.849ZM180.4 85.3333V90.3562H181.149C181.755 90.3562 182.219 90.1581 182.539 89.762C182.859 89.3658 183.023 88.7991 183.03 88.0618V87.6639C183.03 86.8991 182.871 86.3203 182.554 85.9276C182.238 85.5314 181.774 85.3333 181.164 85.3333H180.4ZM188.508 89.4829H187.51L187.138 91.6016H186.193L186.565 89.4829H185.392V88.5941H186.72L186.978 87.1265H185.779V86.2273H187.138L187.515 84.0776H188.456L188.079 86.2273H189.081L189.458 84.0776H190.404L190.027 86.2273H191.159V87.1265H189.867L189.608 88.5941H190.766V89.4829H189.453L189.081 91.6016H188.136L188.508 89.4829ZM187.665 88.5941H188.663L188.921 87.1265H187.918L187.665 88.5941Z" fill="#808080"/>
+<path d="M302.371 88.4631H299.394V91.5378H297.844V84.0138H302.743V85.2695H299.394V87.2125H302.371V88.4631ZM306.417 89.4191H305.42L305.048 91.5378H304.102L304.474 89.4191H303.301V88.5303H304.629L304.888 87.0627H303.689V86.1635H305.048L305.425 84.0138H306.366L305.988 86.1635H306.991L307.368 84.0138H308.314L307.937 86.1635H309.068V87.0627H307.776L307.518 88.5303H308.676V89.4191H307.363L306.991 91.5378H306.045L306.417 89.4191ZM305.575 88.5303H306.572L306.831 87.0627H305.828L305.575 88.5303Z" fill="#808080"/>
+<path d="M363.638 90.6304C363.359 90.9646 362.964 91.2247 362.454 91.4107C361.945 91.5933 361.38 91.6846 360.759 91.6846C360.108 91.6846 359.536 91.5434 359.044 91.2609C358.555 90.9749 358.176 90.5615 357.907 90.0206C357.642 89.4798 357.506 88.8441 357.499 88.1138V87.6022C357.499 86.8512 357.624 86.2018 357.876 85.654C358.131 85.1028 358.496 84.6825 358.971 84.3931C359.45 84.1002 360.01 83.9538 360.651 83.9538C361.543 83.9538 362.241 84.1674 362.744 84.5946C363.247 85.0184 363.545 85.6368 363.638 86.4498H362.129C362.06 86.0192 361.907 85.7039 361.669 85.5041C361.435 85.3043 361.111 85.2044 360.697 85.2044C360.17 85.2044 359.769 85.4025 359.493 85.7987C359.218 86.1949 359.078 86.784 359.075 87.566V88.0466C359.075 88.8355 359.225 89.4315 359.524 89.8346C359.824 90.2377 360.263 90.4392 360.842 90.4392C361.424 90.4392 361.839 90.3152 362.088 90.0671V88.7701H360.677V87.628H363.638V90.6304ZM367.674 89.4625H366.676L366.304 91.5813H365.359L365.731 89.4625H364.558V88.5737H365.886L366.144 87.1061H364.945V86.2069H366.304L366.682 84.0572H367.622L367.245 86.2069H368.247L368.625 84.0572H369.57L369.193 86.2069H370.325V87.1061H369.033L368.774 88.5737H369.932V89.4625H368.619L368.247 91.5813H367.302L367.674 89.4625ZM366.831 88.5737H367.829L368.087 87.1061H367.085L366.831 88.5737Z" fill="#808080"/>
+<path d="M422.362 89.901H419.644L419.127 91.4513H417.479L420.28 83.9272H421.716L424.533 91.4513H422.884L422.362 89.901ZM420.063 88.6453H421.944L420.998 85.8289L420.063 88.6453ZM428.01 89.3326H427.013L426.641 91.4513H425.695L426.067 89.3326H424.894V88.4438H426.222L426.481 86.9761H425.282V86.077H426.641L427.018 83.9272H427.959L427.582 86.077H428.584L428.961 83.9272H429.907L429.53 86.077H430.661V86.9761H429.37L429.111 88.4438H430.269V89.3326H428.956L428.584 91.4513H427.638L428.01 89.3326ZM427.168 88.4438H428.165L428.424 86.9761H427.421L427.168 88.4438Z" fill="#808080"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="578" height="301" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+   <figure>
+    <figcaption>{{description}}</figcaption>
+   <div class="invisible"> <audio id="playerk"
+        controls
+        :src=file>
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio></div>
+</figure>
+ <button class="btn btn-primary" @click="Play()">Play</button> 
+<!--<button class="btn btn-primary" @click="Play()">Play</button>-->
+    <span class="invisible"> {{qid}}</span>   
    </div>
 </template>
 <script>
 import db from "@/firebase/init";
+//import audioPlayerbtn from "../components/audioPlayerbtn.vue";
 export default {
-  props:["qid","FN","SN","TN","tryb"],
+    components:{
+      // audioPlayerbtn,
+        
+    },
+  props:["qid","FN","SN","TN","tryb","file"],
 data(){
    return{
     
@@ -410,7 +405,7 @@ data(){
    }
 },
 computed:{
- exercisesT(){
+  exercisesT(){
       return this.$store.state.exercises;
     },
     triadExVisibility () {
@@ -470,6 +465,7 @@ computed:{
       }
     },
     playTriad(fn,sn,tn){
+      console.log("play");
       this.playMusic();
 let fnbtn = document.getElementById(fn);
 let snbtn = document.getElementById(sn);
@@ -538,8 +534,9 @@ this.$store.commit("dIncrease");
       },
       playInterval(first,second){
         console.log("start")
-         this.playMusic();
-
+        // this.playMusic();
+        document.getElementById('playerk').play();
+        console.log("hghg");
          console.log("gramy");
          console.log("jedynka"+first);
          console.log(second);
@@ -564,10 +561,13 @@ this.$store.commit("dIncrease");
       Play(){
 if(this.tryb=="I"){
   console.log("I");
+   console.log(this.FN+this.SN);
   this.playInterval(this.FN,this.SN)
   console.log("koniec")
 }else{
   console.log("T");
+  console.log(this.FN+this.SN);
+  this.playTriad(this.FN,this.SN,this.TN);
 }
       },
       },
@@ -576,6 +576,9 @@ if(this.tryb=="I"){
 <style scoped>
 img{
     width:80%;
+}
+.invisible{
+  display:none;
 }
 #keyBox{
   /*display:flex;*/
@@ -592,10 +595,10 @@ div{
 
 }
 svg#svg8{
-   width:80%;
+   width:480px;
    /*margin-bottom:20px;
    margin-top:20px;*/
-   height:80%;
+   height:250px;
 }
 rect#rect3850{
 

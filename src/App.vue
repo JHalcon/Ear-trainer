@@ -59,6 +59,10 @@ export default {
     },
      lol6(){
       this.$store.commit("fetchIntervalsT");
+    },
+
+      lol7(){
+      this.$store.commit("fetchIDic");
     }
   },
   mounted:function(){
@@ -69,6 +73,7 @@ export default {
     this.lol4();
     this.lol5();
     this.lol6();
+    this.lol7();
   }
 
 };

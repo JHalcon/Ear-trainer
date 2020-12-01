@@ -6,10 +6,10 @@
       <span id="triadInfo">
    <h4 class="triadInfo">{{triad.text}}</h4>
    <!--<h2 class="triadInfo">{{triad.qid}}</h2>-->
-   <span id="titleSong">{{triad.file}}</span>
+   <span  class="invisible" id="titleSong">{{triad.file}}</span>
    </span>
     <keyboardBox v-bind:qid = "triad.qid" v-bind:FN= "triad.firstNote"  v-bind:SN= "triad.secondNote" v-bind:TN= "triad.thirdNote"/>
-    <button  class="btn btn-secondary" @click="toGame()"> Next step
+    <button id="NS" class="btn btn-secondary" @click="toGame()"> Next step
          </button>
     <triadTestBox v-bind:qid = "triad.qid"  />
     <div id="endPanel">
@@ -105,6 +105,7 @@ setTimeout(() => {  btn.setAttribute('style','fill:rgb(255, 255, 255) !important
   toGame(){
         console.log("to Game jedzie")
         document.getElementById("keyBox").style.display = "none";
+        document.getElementById("NS").style.display = "none";
         document.getElementById("triadInfo").style.display="none";
         console.log("nie widac");
         document.getElementById("TriadBox").style.display = "flex" ;
@@ -224,6 +225,9 @@ div{
    flex-direction: column;
    width: 80vw;
 }
+.invisible{
+   display: none;
+}
 svg#svg8{
    width:120;
    margin-bottom:40px;
@@ -248,5 +252,9 @@ h3 {
 }
  .btn-primary{
   margin:10px;
+}
+#triadInfo{
+   background-color: none;
+   color:cornflowerblue;
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
 <div id="ansB">
+ <!--  <keyboardBox/>--><!--
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -133,18 +134,25 @@
        y="120.81584"
        class="black"/>
   </g>
-</svg>
-      <button  class="btn btn-secondary" @click="playInterval(FN,SN)">ggggg
+</svg>-->
+<!--<keyboardBox  v-bind:FN="triad.firstNote"  v-bind:SN="triad.secondNote" v-bind:file="this.file" v-bind:tryb="this.tryb"/>-->
+ <keyboardBox tryb="I" v-bind:FN="this.FN" v-bind:SN="this.SN" v-bind:file="this.file" />
+      <button  class="btn btn-secondary" @click="playInterval(FN,SN)">Play
          </button>
    </div>
 </template>
 <script>
+import keyboardBox from '../components/keyboardBox.vue';
 export default {
-   props:["FN","SN"],
+         components: {
+keyboardBox,
+  },
+   props:["FN","SN","tryb","file"],
 data(){
    return{
    
     name: "answerBox",
+
    }
 },
    methods:{
@@ -197,7 +205,8 @@ setTimeout(() => {  btn.setAttribute('style','fill:rgb(255, 255, 255) !important
 </script>
 <style scoped>
 #ansB{
-  height:300px;
+  height:400px;
+  width:100%;
   /*display:flex;*/
   align-items: center;
   flex-direction: column;
@@ -213,7 +222,9 @@ div{
 
 }
 svg#svg8{
-   width:120;
+   width:90%;
+  
+   height:90%;
    margin-bottom:40px;
    margin-top:40px;
 }

@@ -2,27 +2,29 @@
 <div id="prl1" class="container p-2">
   <div class="innerContainer">
         <div  class="qbox" v-for="product in products.slice(a,b)" :key="product.id">
-          <h3 class="text-center">{{testName}}</h3>
-          <h4 class="question">{{product.text}}</h4>
+          <h3 class="text-center mb-4">What interval can you hear?</h3>
+         <!-- <h4 class="question">{{product.text}}</h4>-->
           <div id="audio" class="player-wrapper">
+            <div id="songTitle" class="invisible">
+              {{product.file}}
+              </div>
 <!--	<audio-player file='product.file'></audio-player>-->
 </div>
            <audio id="id1" v-bind:src="product.file"> </audio><p id="titleSong">{{ product.file }}</p> <button v-on:click="opop" class="btn btn-secondary">Play</button>
             <button class="btn btn-primary m-2 ansBtn" v-on:click="selectAnswer" value="a">{{product.a}}</button>
             <button class="btn btn-primary m-2 ansBtn" v-on:click="selectAnswer" value="b"> {{product.b}}</button>
             <button class="btn btn-primary m-2 ansBtn" v-on:click="selectAnswer" value="c"> {{product.c}}</button>
-            <span id="answer">{{product.correct}}</span>
-            <answerBox v-bind:FN="product.firstNote" v-bind:SN="product.secondNote"></answerBox>
+          <!--  <span id="answer">{{product.correct}}</span>-->
+     <answerBox v-bind:FN="product.firstNote" v-bind:SN="product.secondNote"  v-bind:file="product.file"></answerBox>
         </div>
-         <div id="gameResoult" v-if="endList">
-    <h2>Your game resoult:</h2>
-    <span>Good answers: {{goodA}}</span>
-    <span>Bad answers: {{badA}}</span>
+         <div id="summary" >
+           <h3>Training is completed</h3>
+           <button class="btn btn-primary" v-on:click="resetGame">Try again</button>
     </div>
     
     <div class="buttons">
        <button id="hint" class="btn btn-light" v-on:click="hint" >Keys hint</button>
-      <button id="nextItem" class="btn btn-dark" v-on:click="nextQuestion" >Next</button>
+      <button id="nextItem" class="btn btn-dark" v-on:click="nextT" >Next</button>
       
       </div>
 
@@ -48,12 +50,17 @@ export default {
     products(){
       return this.$store.getters.search(this.chapter);
     },
+    /*tabsize(){
+      
+      return this.$store.getters.search(this.chapter).length;
     
+    },
+    */
     
     intervals1(){
       return this.$store.state.intervals1;
     },
-    productsSize(){
+    tabSize(){
     return this.$store.state.products.length;
     },
     goodA(){
@@ -95,6 +102,12 @@ answerBox,
     increaseGA(){
       this.$store.commit("increaseGA");
     },
+     resetGame(){
+     console.log("reset");
+this.a=0;
+this.b =1;
+document.getElementById("summary").style.display = "none";
+   },
     increaseBA(){
         this.$store.commit("increaseBA");
     },
@@ -120,18 +133,16 @@ answerBox,
   showResoult(){
 
   },
-  resetGame(){
-    console.log("reset game");
-   this.a=0;
-    this.b=1;
-    this.endList=false;
-    this.iteratorList=0;
-    this.selectedAns='a';
-    this.resetGA();
-    this.resetBA();
-    let btn = document.getElementById("nextItem");
-    btn.innerHTML = "Next"
-  },
+  nextT(){
+    console.log(this.tabSize);
+   if(this.b==this.tabSize-1){
+      console.log("koniec");
+      document.getElementById("summary").style.display = "flex";
+    }
+   this.a++;
+      this.b++;
+      console.log("hfhgfgf"+this.a+this.tabSize);
+ },
     nextQuestion(){
          let box = document.getElementById('ansB');
        box.style.display = "none";
@@ -190,8 +201,8 @@ answerBox,
 }
 span{
   display:flex;
-  background-color: cornflowerblue;
-  border: 2px solid white;
+  //background-color: cornflowerblue;
+  //border: 2px solid white;
 }
 .buttons{
   background-color: darkgray;
@@ -204,6 +215,13 @@ span{
 }
 #titleSong{
   display: none;
+}
+#summary{
+  display:none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:60vh;
 }
 span #answer{
   display:hidden;

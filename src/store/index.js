@@ -19,6 +19,7 @@ export default new Vuex.Store({
     exercises:[],
     triadIds:[],
     intervalsT:[],
+    IDics:[],
     goodA:0,
     badA:0,
     alertV:false,
@@ -27,6 +28,7 @@ export default new Vuex.Store({
     c:0,
     d:1,
     tNumber:0,
+    aud :new Audio("plik.mp3"),
   exerTest:[],
   },
     actions: {
@@ -80,17 +82,28 @@ export default new Vuex.Store({
       sound:()=>{
           // console.log(text);
           let audio1 = document.getElementById('titleSong').textContent;
-           let aud = new Audio(audio1);
-           aud.play();
+           let aud1 = new Audio(audio1);
+           aud1.load(audio1);
+           aud1.play();
            console.log("end sound");
        },
+       stopSound:()=>{
+        // console.log(text);
+        this.aud.stop();
+         console.log("stop sound");
+     },
       komunikat:()=>{
         console.log("jasgdjahdg");
         },
+        stopsoundsound:()=>{
+
+        },
         fetchProducts:(state)=>{
+          
           console.log("gasfag");
           console.log(state);
           db.collection("testOne").get().then(snapshot=>{
+            state.products = [];
         snapshot.forEach(doc => {
           console.log(doc.data()+doc.id);
           let product = doc.data();
@@ -101,7 +114,9 @@ export default new Vuex.Store({
           })
         },
         fetchTriads:(state)=>{
+         
           db.collection("triads").get().then(snapshot=>{
+            state.triads = [];
         snapshot.forEach(doc => {
           console.log(doc.data()+doc.id);
           let triad = doc.data();
@@ -113,6 +128,7 @@ export default new Vuex.Store({
         },
         fetchIntervalsT:(state)=>{
           db.collection("intervalsT").get().then(snapshot=>{
+            state.intervalsT=[];
         snapshot.forEach(doc => {
           console.log(doc.data()+doc.id);
           let i = doc.data();
@@ -125,6 +141,7 @@ export default new Vuex.Store({
         fetchInt1:(state)=>{
           console.log("gasfag");
           db.collection("intervals1").get().then(snapshot=>{
+            state.intervals1 =[];
         snapshot.forEach(doc => {
           console.log(doc.data()+doc.id);
           let interval = doc.data();
@@ -151,6 +168,7 @@ export default new Vuex.Store({
         fetchExercises:(state)=>{
           //console.log("gasfag");
           db.collection("triadsE").get().then(snapshot=>{
+            state.exercises=[];
         snapshot.forEach(doc => {
           console.log(doc.data()+doc.id);
           let e = doc.data();
@@ -160,10 +178,24 @@ export default new Vuex.Store({
         
           })
         },
+        fetchIDic:(state)=>{
+          //console.log("gasfag");
+          db.collection("intervalsDic").get().then(snapshot=>{
+            state.IDics=[];
+        snapshot.forEach(doc => {
+          console.log(doc.data()+doc.id);
+          let e = doc.data();
+          e.id = doc.id;
+          state.IDics.push(e);
+        });
+        
+          })
+        },
         fetchTid:(state)=>{
           //console.log("gasfag");
           console.log("dodaje idiki")
           db.collection("Triandid").get().then(snapshot=>{
+            state.triadIds =[];
         snapshot.forEach(doc => {
           console.log(doc.data()+doc.id);
           let e = doc.data();
@@ -178,6 +210,7 @@ export default new Vuex.Store({
         fetchDB:(state)=>{
           console.log("gasfag");
           db.collection("testOne","intervals1").get().then(snapshot=>{
+            state.DBases =[];
         snapshot.forEach(doc => {
           console.log(doc.data()+doc.id);
           let DB = doc.data();
