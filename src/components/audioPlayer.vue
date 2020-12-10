@@ -1,38 +1,28 @@
 <template>
-<div>
+  <div>
     <figure>
-    <figcaption>{{description}}</figcaption>
-   <div> <audio id="player"
-        controls
-        :src=fileName>
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></div>
-</figure>
-    </div>
+      <figcaption>{{ description }}</figcaption>
+      <div><audio id="player" controls :src="fileName"></audio></div>
+    </figure>
+  </div>
 </template>
-
 
 <script>
 export default {
-    props:['fileName','description'],
-    name: "audioPlayer",
-data(){
-   return{
-    
-    
-   
-   }
-},
-methods:{
-    showme(){
-        console.log(this.fileName)
+  props: ["fileName", "description"],
+  name: "audioPlayer",
+  data() {
+    return {};
+  },
+  methods: {
+    showme() {
+      console.log(this.fileName);
     }
-}
-}
+  }
+};
 </script>
 <style lang="scss">
-.invisible{
-    display:none;
+.invisible {
+  display: none;
 }
 </style>
