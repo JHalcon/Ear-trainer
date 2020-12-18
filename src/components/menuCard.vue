@@ -9,8 +9,7 @@
     >
       <h3>{{ title }}</h3>
       <b-card-text>
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
+        {{ innerText }}
       </b-card-text>
 
       <b-button
@@ -34,16 +33,22 @@
 export default {
   name: "menuCard",
   mainText: "",
-  props: ["title", "imageLink", "destination", "chapter"]
+  props: ["title", "imageLink", "destination", "chapter", "innerText"]
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .menuCard {
-  margin-top: 10vh;
+  /*margin-top: 10vh;*/
 }
 router-link {
   color: white;
+}
+
+@media (max-width: 700px) {
+  .menuCard {
+    margin-top: 30px;
+  }
 }
 </style>

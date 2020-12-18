@@ -1,19 +1,22 @@
 <template>
   <div id="main" class="container p-1">
-    <div id="prev" v-if="prevVisible">
-      <h3>Now You can do intervals dictation</h3>
-      <h4>
+    <div id="prev" class="invisible" >
+      <h3 style="color:white">Now You can do intervals dictation</h3>
+      <h4 class="m-3">
         At first you have to listen to the whole record and than write down
         interval symbols in the corect order
       </h4>
       <h4>Good luck and have fun!</h4>
-      <button class="btn btn-second" v-on:click="toDic">Lets try</button>
+      <button class="btn btn-primary" v-on:click="toDic">Lets try</button>
     </div>
-    <div v-if="!prevVisible">
+    <div id="firstStepBox" >
       <div id="contentBox" v-for="i in IDics.slice(c, d)" :key="i.id">
-        <div id="firstStep" class="invisible">
-          <h3 id="sectionTitle">Listen to the whole dictation</h3>
-          <audioPlayer v-bind:filename="i.fileAll" />
+        <div id="firstStep" v-show="!trVisible">
+          <div class="strip">
+          <h3 id="sectionTitle">Listen to the whole dictation {{i.fileAll}}</h3>
+         
+      <audio-player :fileName="i.fileAll" />
+          </div>
           <h3>White down interval symbols in the correct pleace</h3>
 
           <IntervalDicForm
@@ -23,9 +26,13 @@
             v-bind:FOI="i.fourthI"
             v-bind:FII="i.fifthI"
           />
+          <button  class="btn btn-primary" v-on:click="goToTrans">
+      Go to transcription
+    </button>
         </div>
+         
         <!--<h2 class="triadInfo">{{triad.qid}}</h2>-->
-        <div id="transcryption">
+        <div id="transcryption" v-show="trVisible">
           <img class="transcryptionImg mb-2" src="IDic1.jpg" />
           <div class="cartonsBox">
             <div class="carton" id="c1"></div>
@@ -42,7 +49,7 @@
 
         <div id="endPanel">
           <h2>End of the chapter</h2>
-          <button class="btn btn-primary" v-on:click="resetChapter">
+          <button class="btn btn-primary" >
             Play again
           </button>
           <button class="btn btn-secondary" @click="$router.push('/train')">
@@ -67,7 +74,8 @@ export default {
       d: 1,
       name: "intervalDicSite",
       endOfMode: false,
-      prevVisible: true
+      prevVisible: true,
+      trVisible:false,
     };
   },
   computed: {
@@ -77,11 +85,16 @@ export default {
   },
   methods: {
     toDic() {
-      this.prevVisible = false;
+      console.log("ssfd");
+      //this.prevVisible = false;
     },
 
     checkDic() {
       console.log();
+    },
+    goToTrans(){
+this.trVisible = true;
+console.log(this.trVisible)
     },
     Animate() {
       let au = document.getElementById("player");
@@ -111,11 +124,11 @@ export default {
               c5.innerHTML = "2>";
               setTimeout(() => {
                 c5.style.backgroundColor = "cornflowerblue";
-              }, 3000);
-            }, 3000);
-          }, 3000);
-        }, 3000);
-      }, 3000);
+              }, 12000);
+            }, 12000);
+          }, 11000);
+        }, 11000);
+      }, 11000);
       // c1.style.backgroundColor = "white";
     }
   }
@@ -126,14 +139,45 @@ export default {
   font-family: Roboto;
 }
 #transcryption {
+  display:flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
+#firstStepBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    height:100%;
+    width:100%;
+}
+#firstStep{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+   width:100%;
+}
+#NS{
+  width:50%;
+}
+
 .cartonsBox {
   display: flex;
   justify-content: space-around;
   width: 55vw;
   padding-left: 30px;
   margin-bottom: 30px;
+}
+.strip{
+  background-color: cornflowerblue;
+  width:100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .transcryptionImg {
   width: 85%;
@@ -145,6 +189,9 @@ export default {
   font-size: 40px;
   border-radius: 5px;
   margin: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 img {
   width: 40%;
@@ -156,6 +203,8 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left:50px;
+   padding-right:50px;
 }
 #main {
   display: flex;
@@ -168,15 +217,16 @@ img {
   width: 80%;
 }
 
-div {
+/*div {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+}*/
 #contentBox {
   display: flex;
   flex-direction: column;
-  width: 80vw;
+  
+   width:100%;
 }
 .invisible {
   display: none;

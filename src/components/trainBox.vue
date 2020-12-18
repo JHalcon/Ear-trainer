@@ -6,14 +6,14 @@
         v-for="product in products.slice(a, b)"
         :key="product.id"
       >
-        <div id="innerBox" v-show="!hintV">
-          <h3 class="text-center mb-4">What interval can you hear?</h3>
+        <div id="innerBoxQ" v-show="!hintV">
+          <h3 class="text-center mb-5" style="font-weight: bold">What interval can you hear?</h3>
           <!-- <h4 class="question">{{product.text}}</h4>-->
           <div id="audio" class="player-wrapper">
             <div id="songTitle" class="invisible">
               {{ product.file }}
             </div>
-            <span id="answer">{{ product.correct }}</span>
+            <span id="answer" class="invisible">{{ product.correct }}</span>
             <!--	<audio-player file='product.file'></audio-player>-->
           </div>
           <audio id="id1" v-bind:src="product.file"></audio>
@@ -61,7 +61,7 @@
           <button id="ChAItem" class="btn btn-dark" v-on:click="checkA">
             Check answer
           </button>
-          <button id="hint" class="btn btn-light" v-on:click="hint">
+          <button id="hint" class="btn btn-light mr-2" v-on:click="hint">
             Keys hint
           </button>
 
@@ -342,13 +342,13 @@ span {
 .btn:hover {
   background-color: gray !important;
 }
-#innerBox {
+#innerBoxQ {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 .greenT {
   color: green;

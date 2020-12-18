@@ -1,7 +1,7 @@
 <template>
   <div id="prl1" class="container p-2">
     <div class="innerContainer">
-      <h3 class="text-center white-font">Test I</h3>
+      <h3 class="text-center white-font mb-4" >Level I test</h3>
       <div
         class="qbox"
         v-for="product in products.slice(a, b)"
@@ -37,7 +37,7 @@
         <span id="answer">{{ product.correct }}</span>
       </div>
       <div id="gameResoult" v-if="endList">
-        <h2>Your game resoult:</h2>
+        <h2>Your test resoults:</h2>
         <span class="ga-font">Good answers: {{ goodA }}</span>
         <span class="ba-font">Bad answers: {{ badA }}</span>
       </div>

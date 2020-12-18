@@ -630,7 +630,9 @@
         </audio>
       </div>
     </figure>
-    <button class="btn btn-primary" @click="Play()">Play</button>
+    <button class="btn btn-primary" @click="Play()" :disabled="isDisabled">
+      Play
+    </button>
     <!--<button class="btn btn-primary" @click="Play()">Play</button>-->
     <span class="invisible"> {{ qid }}</span>
   </div>
@@ -645,8 +647,9 @@ export default {
   props: ["qid", "FN", "SN", "TN", "tryb", "file"],
   data() {
     return {
-      name: "noteInContext"
+      name: "noteInContext",
       ///exercises:[],
+      isDisabled: false
     };
   },
   computed: {
@@ -714,18 +717,16 @@ export default {
       let fnbtn = document.getElementById(fn);
       let snbtn = document.getElementById(sn);
       let tnbtn = document.getElementById(tn);
-      fnbtn.setAttribute("style", "fill:rgb(255, 0, 0) !important");
+      
+      setTimeout(()=>{fnbtn.setAttribute("style", "fill:rgb(255, 0, 0) !important");
       setTimeout(
         () => {
-          //fnbtn.setAttribute('style','fill:rgb(255, 255, 255) !important')
           this.bwColorChange(fnbtn);
           snbtn.setAttribute("style", "fill:rgb(81, 98, 247) !important");
           setTimeout(() => {
-            //snbtn.setAttribute('style','fill:rgb(255, 255, 255) !important');
             this.bwColorChange(snbtn);
             tnbtn.setAttribute("style", "fill:rgb(128,128,128) !important");
             setTimeout(() => {
-              //tnbtn.setAttribute('style','fill:rgb(255,255,255) !important');
               this.bwColorChange(tnbtn);
               setTimeout(() => {
                 fnbtn.setAttribute("style", "fill:rgb(255, 0, 0) !important");
@@ -743,7 +744,9 @@ export default {
 
         1000
       );
-    }, //biale E
+    },200);
+    
+    },
 
     colorBtn(key) {
       console.log("ahsdfhg");
@@ -769,8 +772,6 @@ export default {
       this.exerFilter();
       console.log(this.triadExVisibility);
       this.UpdateBox();
-      //this.cIncrease();
-      //this.dIncrease();
     },
     cIncrease() {
       this.$store.commit("cIncrease");
@@ -779,28 +780,25 @@ export default {
       this.$store.commit("dIncrease");
     },
     playInterval(first, second) {
-      console.log("start");
-      // this.playMusic();
-      document.getElementById("playerk").play();
-      console.log("hghg");
-      console.log("gramy");
-      console.log("jedynka" + first);
-      console.log(second);
-      console.log("intervallle");
+      this.isDisabled = true;
+      console.log(this.isDisabled);
+
       let btn2 = document.getElementById(second);
       let btn1 = document.getElementById(first);
       console.log(btn1);
-      btn1.setAttribute("style", "fill:rgb(255, 0, 0) !important"); //czarne c
+
+      document.getElementById("playerk").play();
       setTimeout(() => {
-        btn1.setAttribute("style", "fill:rgb(255, 255, 255) !important");
-        btn2.setAttribute("style", "fill:rgb(81, 98, 247) !important"); //biale c
+        btn1.setAttribute("style", "fill:rgb(255, 0, 0) !important");
         setTimeout(() => {
-          if (btn2.classList.contains("white"))
-            btn2.setAttribute("style", "fill:rgb(255,255,255) !important");
-          else btn2.setAttribute("style", "fill:rgb(0,0,0) !important");
-          btn1.setAttribute("style", "fill:rgb(255,255,255) !important"); // rozowe E
-          setTimeout(
-            () => {
+          btn1.setAttribute("style", "fill:rgb(255, 255, 255) !important");
+          btn2.setAttribute("style", "fill:rgb(81, 98, 247) !important");
+          setTimeout(() => {
+            if (btn2.classList.contains("white"))
+              btn2.setAttribute("style", "fill:rgb(255,255,255) !important");
+            else btn2.setAttribute("style", "fill:rgb(0,0,0) !important");
+            btn1.setAttribute("style", "fill:rgb(255,255,255) !important");
+            setTimeout(() => {
               btn1.setAttribute("style", "fill:rgb(255,0,0) !important");
               btn2.setAttribute("style", "fill:rgb(81, 98, 247) !important");
               setTimeout(() => {
@@ -823,12 +821,15 @@ export default {
                   console.log("2222");
                   btn2.setAttribute("style", "fill:rgb(0,0,0) !important");
                 }
+                setTimeout(() => {
+                  this.isDisabled = false;
+                  console.log("tera" + this.isDisabled);
+                }, 2000);
               }, 2000);
-            }, //biale E
-            200
-          );
+            }, 200);
+          }, 1000);
         }, 1000);
-      }, 1000);
+      }, 200);
     },
     Play() {
       if (this.tryb == "I") {
@@ -858,6 +859,7 @@ img {
   flex-direction: column;
   align-items: center;
   margin-bottom: 2%;
+  z-index: 3;
 }
 div {
   display: flex;
@@ -875,5 +877,15 @@ rect#rect3850 {
 }
 button {
   margin-top: 10px;
+}
+@media (max-width: 700px) {
+  svg#svg8 {
+    width: 320px !important;
+  }
+}
+@media (max-width: 700px) and (orientation: landscape) {
+  svg#svg8 {
+    width: 450px !important;
+  }
 }
 </style>

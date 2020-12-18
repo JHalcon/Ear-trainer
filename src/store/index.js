@@ -33,12 +33,20 @@ export default new Vuex.Store({
     aud: new Audio("plik.mp3"),
     exerTest: [],
     isStarted: false,
+    ifHelp:true,
+    CP:true,
   },
   actions: {},
 
   mutations: {
     TEtrue(state) {
       state.triadExVisibility = true;
+    },
+    changeCP(state){
+    state.CP = !state.CP;
+    },
+    ifHelpChange(state) {
+      state.ifHelp = !state.ifHelp;
     },
     cIncrease(state) {
       console.log("INCR c");

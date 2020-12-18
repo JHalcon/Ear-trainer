@@ -1,12 +1,12 @@
 <template v-if="triadExVisibility" :key="updateBox">
   <div id="ILB" class="container">
     <div class="row" v-for="t in intervalsT.slice(a, b)" :key="t.id">
-      <div class="col-6" id="left">
+      <div class="col-12 col-lg-6" id="left">
         <h3 style="color:white; font-family:Tahoma">{{ t.name }}</h3>
         <img v-bind:src="t.img" />
 
         <h5>
-          <span style="display:inline">Number symbol:</span
+          <span style="display:inline">Numerical symbol:</span
           ><span class="whiteL"> {{ t.symbol }}</span>
         </h5>
         <h5 class="desc">
@@ -21,12 +21,13 @@
           {{ t.file }}
         </div>
       </div>
-      <div class="col-6" id="right">
+      <div class="col-12 col-lg-6" id="right">
         <keyboardBox
           tryb="I"
           v-bind:FN="t.firstNote"
           v-bind:SN="t.secondNote"
           v-bind:file="t.file"
+          class="resKey"
         />
       </div>
       <div class="col-12 allCentered">
@@ -59,6 +60,7 @@ export default {
   },
   name: "ILBox",
   selected: "",
+  Props: ["idQ"],
   components: {
     keyboardBox,
     audioPlayer
@@ -161,5 +163,34 @@ h5.desc:last-child {
 }
 h5 {
   margin-top: 10px;
+}
+@media (max-width: 700px) {
+    
+.row{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#right{
+   margin-bottom: 20px;
+  margin-top: 20px;
+}
+#ILB{
+  height:95%;
+}
+svg#svg8{
+  width:250px !important;
+}
+
+
+@media (max-width: 700px){ 
+    
+
+svg#svg8{
+  width:450px !important;
+}
+
+}
+
+
 }
 </style>

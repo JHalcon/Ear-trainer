@@ -3,9 +3,10 @@
     <form>
       <div class="row">
         <div class="col mb-2">
-          <span v-if="checkform" class="mb-2"
-            ><span class="goodA" v-if="gai1">This is correct answer</span>
-            <span class="badA" v-if="!gai1">This is wrong answer</span>
+          <span v-if="checkform"  id="span1">
+            <span class="goodA" v-if="ea1">Empty answer box!</span>
+            <span class="goodA" v-if="gai1">This is correct answer</span>
+            <span class="badA" v-if="bai1">This is wrong answer</span>
           </span>
           <input
             type="text"
@@ -15,9 +16,10 @@
           />
         </div>
         <div class="col">
-          <span v-if="checkform">
+          <span v-if="checkform" id="span2">
+            <span class="goodA" v-if="ea2">Empty answer box!</span>
             <span class="goodA" v-if="gai2">This is correct answer</span>
-            <span class="badA" v-if="!gai2">This is wrong answer</span></span
+            <span class="badA" v-if="bai2">This is wrong answer</span></span
           >
           <input
             type="text"
@@ -27,9 +29,10 @@
           />
         </div>
         <div class="col">
-          <span v-if="checkform">
+          <span v-if="checkform" id="span3">
+            <span class="goodA" v-if="ea3">Empty answer box!</span>
             <span class="goodA" v-if="gai3">This is correct answer</span>
-            <span class="badA" v-if="!gai3">This is wrong answer</span></span
+            <span class="badA" v-if="bai3">This is wrong answer</span></span
           >
           <input
             type="text"
@@ -38,10 +41,11 @@
             placeholder="Third interval"
           />
         </div>
-        <div class="col">
+        <div class="col" id="span4">
           <span v-if="checkform">
+            <span class="goodA" v-if="ea4">Empty answer box!</span>
             <span class="goodA" v-if="gai4">This is correct answer</span>
-            <span class="badA" v-if="!gai4">This is wrong answer</span></span
+            <span class="badA" v-if="bai4">This is wrong answer</span></span
           >
           <input
             type="text"
@@ -51,9 +55,10 @@
           />
         </div>
         <div class="col">
-          <span v-if="checkform">
+          <span v-if="checkform" id="span5">
+            <span class="goodA" v-if="ea5">Empty answer box!</span>
             <span class="goodA" v-if="gai5">This is correct answer</span>
-            <span class="badA" v-if="!gai5">This is wrong answer</span></span
+            <span class="badA" v-if="bai5">This is wrong answer</span></span
           >
           <input
             type="text"
@@ -70,6 +75,7 @@
     <button id="NS" class="btn btn-secondary" @click="checkDic()">
       Check dictation
     </button>
+   
   </div>
 </template>
 <script>
@@ -89,7 +95,17 @@ export default {
       gai2: false,
       gai3: false,
       gai4: false,
-      gai5: false
+      gai5: false,
+        bai1: false,
+      bai2: false,
+      bai3: false,
+      bai4: false,
+      bai5: false,
+       ea1: false,
+      ea2: false,
+      ea3: false,
+      ea4: false,
+      ea5: false
     };
   },
   computed: {},
@@ -103,35 +119,84 @@ export default {
       let aI4 = document.getElementById("aI4").value;
       let aI5 = document.getElementById("aI5").value;
       console.log(aI1 + aI2 + aI3 + aI4 + aI5);
-      if (aI1 == this.FI) {
-        console.log("1 good");
-        this.gai1 = true;
-      } else {
+      
+      if (aI1 == "") {
+        this.ea1 = true;
         this.gai1 = false;
-      }
-      if (aI2 == this.SI) {
-        console.log("2 good");
-        this.gai2 = true;
+        this.bai1 = false;
       } else {
+        if (aI1 == this.FI) {
+          console.log("1 good");
+          this.gai1 = true;
+          this.bai1 = false;
+          this.ea1 = false;
+        } else {
+          this.gai1 = false;
+          this.bai1 = true;
+          this.ea1 = false;
+        }
+      }
+      console.log("dalej");
+      if (aI2 == "") {
+        this.ea2 = true;
+        console.log("hgsfhdf");
         this.gai2 = false;
-      }
-      if (aI3 == this.THI) {
-        console.log("3 good");
-        this.gai3 = true;
+        this.bai2 = false;
       } else {
+        if (aI2 == this.SI) {
+           this.gai2 = true;
+          this.bai2 = false;
+          this.ea2 = false;
+        } else {
+          this.gai2 = false;
+          this.bai2 = true;
+          this.ea2 = false;
+        }
+      }
+      if (aI3 == "") {
+        this.ea3 = true;
         this.gai3 = false;
-      }
-      if (aI4 == this.FOI) {
-        console.log("4 good");
-        this.gai4 = true;
+        this.bai3 = false;
       } else {
+        if (aI3 == this.THI) {
+          this.gai3 = true;
+          this.bai3 = false;
+          this.ea3 = false;
+        } else {
+         this.gai3 = false;
+          this.bai3 = true;
+          this.ea3 = false;
+        }
+      }
+      if (aI4 == "") {
+        this.ea4 = true;
         this.gai4 = false;
-      }
-      if (aI5 == this.FII) {
-        console.log("5 good");
-        this.gai5 = true;
+        this.bai4 = false;
       } else {
+        if (aI4 == this.FOI) {
+          this.gai4 = true;
+          this.bai4 = false;
+          this.ea4 = false;
+        } else {
+          this.gai4 = false;
+          this.bai4 = true;
+          this.ea4 = false;
+        }
+      }
+      if (aI5 == "") {
+        this.ea5 = true;
         this.gai5 = false;
+        this.bai5 = false;
+      } else {
+        if (aI5 == this.FII) {
+          this.gai5 = true;
+          this.bai5 = false;
+          this.ea5 = false;
+        } else {
+          this.gai5 = false;
+          this.bai5 = true;
+          this.ea5 = false;
+        }
       }
     }
   }
@@ -188,5 +253,8 @@ h3 {
   justify-content: center;
   display: flex;
   flex-direction: column;
+}
+.btn {
+  margin-top: 50px;
 }
 </style>

@@ -7,7 +7,7 @@
       v-if="alertV"
       role="alert"
     >Please check the answer</div>
-    <router-view></router-view>
+    <router-view ></router-view>
   </div>
 </template>
 <script>
@@ -21,6 +21,11 @@ export default {
     return {
       alertV: true
     };
+  },
+  computed:{
+     ifHelp() {
+      return this.$store.state.ifHelp;
+    },
   },
   methods: {
     fetch() {
