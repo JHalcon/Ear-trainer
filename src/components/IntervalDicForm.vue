@@ -2,8 +2,8 @@
   <div id="imputsI">
     <form>
       <div class="row">
-        <div class="col mb-2">
-          <span v-if="checkform"  id="span1">
+        <div class="col-12  col-lg-2 whiteInput ">
+          <span v-if="checkform" id="span1">
             <span class="goodA" v-if="ea1">Empty answer box!</span>
             <span class="goodA" v-if="gai1">This is correct answer</span>
             <span class="badA" v-if="bai1">This is wrong answer</span>
@@ -15,7 +15,7 @@
             placeholder="First interval"
           />
         </div>
-        <div class="col">
+        <div class="col-12 col-lg-2 whiteInput">
           <span v-if="checkform" id="span2">
             <span class="goodA" v-if="ea2">Empty answer box!</span>
             <span class="goodA" v-if="gai2">This is correct answer</span>
@@ -28,7 +28,7 @@
             placeholder="Second interval"
           />
         </div>
-        <div class="col">
+        <div class="col-12 col-lg-2 whiteInput">
           <span v-if="checkform" id="span3">
             <span class="goodA" v-if="ea3">Empty answer box!</span>
             <span class="goodA" v-if="gai3">This is correct answer</span>
@@ -41,7 +41,7 @@
             placeholder="Third interval"
           />
         </div>
-        <div class="col" id="span4">
+        <div class="col-12 col-lg-2 whiteInput" id="span4">
           <span v-if="checkform">
             <span class="goodA" v-if="ea4">Empty answer box!</span>
             <span class="goodA" v-if="gai4">This is correct answer</span>
@@ -54,7 +54,7 @@
             placeholder="Fourth interval"
           />
         </div>
-        <div class="col">
+        <div class="col-12 col-lg-2 whiteInput">
           <span v-if="checkform" id="span5">
             <span class="goodA" v-if="ea5">Empty answer box!</span>
             <span class="goodA" v-if="gai5">This is correct answer</span>
@@ -75,7 +75,6 @@
     <button id="NS" class="btn btn-secondary" @click="checkDic()">
       Check dictation
     </button>
-   
   </div>
 </template>
 <script>
@@ -96,12 +95,12 @@ export default {
       gai3: false,
       gai4: false,
       gai5: false,
-        bai1: false,
+      bai1: false,
       bai2: false,
       bai3: false,
       bai4: false,
       bai5: false,
-       ea1: false,
+      ea1: false,
       ea2: false,
       ea3: false,
       ea4: false,
@@ -119,7 +118,7 @@ export default {
       let aI4 = document.getElementById("aI4").value;
       let aI5 = document.getElementById("aI5").value;
       console.log(aI1 + aI2 + aI3 + aI4 + aI5);
-      
+
       if (aI1 == "") {
         this.ea1 = true;
         this.gai1 = false;
@@ -144,7 +143,7 @@ export default {
         this.bai2 = false;
       } else {
         if (aI2 == this.SI) {
-           this.gai2 = true;
+          this.gai2 = true;
           this.bai2 = false;
           this.ea2 = false;
         } else {
@@ -163,7 +162,7 @@ export default {
           this.bai3 = false;
           this.ea3 = false;
         } else {
-         this.gai3 = false;
+          this.gai3 = false;
           this.bai3 = true;
           this.ea3 = false;
         }
@@ -247,6 +246,7 @@ h3 {
 .row {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .col {
   align-items: center;
@@ -256,5 +256,23 @@ h3 {
 }
 .btn {
   margin-top: 50px;
+}
+.whiteInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  .whiteInput {
+    margin: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  span {
+    margin-bottom: 2px;
+  }
 }
 </style>

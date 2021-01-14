@@ -1,25 +1,27 @@
 <template>
   <div class="container">
-    <!-- <mainBanner></mainBanner>-->
     <div id="main" class="row">
       <menuCard
         title="Intervals chapter 1"
         imageLink="covers/I1.png"
         destination="modeSite"
         class="col-12 col-lg-4 col-sm-12"
+        innerText="Donec mollis, erat in venenatis dictum, ipsum urna sollicitudin lectus, eget luctus erat enim aliquet enim. Nam metus dolor, vestibulum id pretium eu, rutrum eu mauris. "
       ></menuCard>
       <menuCard
         title="Note in context chapter 1"
         imageLink="covers/ftic.png"
         destination="noteInContext"
         class="col-12 col-lg-4 col-sm-12"
+        innerText="Donec mollis, erat in venenatis dictum, ipsum urna sollicitudin lectus, eget luctus erat enim aliquet enim. Nam metus dolor, vestibulum id pretium eu, rutrum eu mauris. "
       ></menuCard>
       <menuCard
-        title="Interval dictotion chapter 1"
+        title="Interval dictation chapter 1"
         imageLink="covers/I1.png"
         destination="intervalDicSite"
         chapter="I1"
         class="col-12 col-lg-4 col-sm-12"
+        innerText="Donec mollis, erat in venenatis dictum, ipsum urna sollicitudin lectus, eget luctus erat enim aliquet enim. Nam metus dolor, vestibulum id pretium eu, rutrum eu mauris. "
       ></menuCard>
     </div>
   </div>
@@ -35,7 +37,6 @@ import db from "@/firebase/init";
 export default {
   name: "trainMode",
   components: {
-    // mainBanner,
     menuCard
   },
   methods: {
@@ -54,27 +55,25 @@ export default {
 #main {
   display: flex;
   flex-direction: row;
-  /*padding-top: 10vh;*/
   justify-content: space-around;
   align-items: center;
   height: 88vh;
   background-color: rgba(255, 255, 255, 0.7);
 }
 @media (max-width: 700px) {
-    
-.row{
-  margin-bottom: 20px;
-  margin-top: none;
-  justify-content: center;
-  display:flex;
-}
-.menuCard{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-#main{
-  height:100%;
-}
+  .row {
+    margin-bottom: 20px;
+    margin-top: none;
+    justify-content: center;
+    display: flex;
+  }
+  .menuCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #main {
+    height: 100%;
+  }
 }
 </style>

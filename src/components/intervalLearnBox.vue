@@ -36,11 +36,14 @@
     </div>
     <div id="summary">
       <h2>Training is completed</h2>
-      <button class="btn btn-primary mt-4" v-on:click="resetGame">
-        Learn again
+      <button class="btn btn-primary mt-4  mb-3 sb" v-on:click="resetGame">
+        Learn intervals again
       </button>
-      <button class="btn btn-dark mt-2" @click="$router.push('/modeSite')">
-        Back to chapter menu
+      <button class="btn btn-dark mt-2 mb-3 sb" @click="$router.push('/modeSite')">
+        Back to the chapter menu
+      </button>
+      <button class="btn btn-light mt-2 sb" @click="$router.push('/')">
+        Back to the main menu
       </button>
     </div>
   </div>
@@ -165,32 +168,41 @@ h5 {
   margin-top: 10px;
 }
 @media (max-width: 700px) {
-    
-.row{
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-#right{
-   margin-bottom: 20px;
-  margin-top: 20px;
-}
-#ILB{
-  height:95%;
-}
-svg#svg8{
-  width:250px !important;
-}
+  .row {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  #right {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 70vh;
+  }
+  #ILB {
+    height: 95%;
+  }
+  svg#svg8 {
+    width: 250px !important;
+  }
 
+  @media (max-width: 700px) {
+    svg#svg8 {
+      width: 450px !important;
+    }
+    #summary{
+      height:84vh;
+    }
+    button.sb{
+        margin-top:10vh
+    }
+  }
 
-@media (max-width: 700px){ 
-    
-
-svg#svg8{
-  width:450px !important;
-}
-
-}
-
-
+  @media (max-width: 700px) and (orientation: landscape) {
+    #ILB {
+      height: 100%;
+    }
+    #right {
+      height: 110vh;
+    }
+  }
 }
 </style>

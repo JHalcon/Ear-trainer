@@ -1,9 +1,9 @@
 <template>
   <div class="all">
-    <div class="invitationPage">
+    <div id="invitationPage1">
       <div id="invitationPage" v-show="IP">
         <h1 class="iText">Walcome to Ear Trainer App</h1>
-        <h2>Lets start learn some music</h2>
+        <h2 style="color:cornflowerblue">Lets start learn some music</h2>
         <button v-on:click="animation" class="btn btn-dark">Play</button>
       </div>
     </div>
@@ -27,14 +27,13 @@
         ></menuCard>
       </div>
     </div>
-    <help v-show="ifHelp" />
   </div>
 </template>
 
 <script>
 import menuCard from "../components/menuCard.vue";
 import { gsap } from "gsap";
-import help from "../components/help.vue";
+//import help from "../components/help.vue";
 //import firebase from "@/firebase/init"
 import db from "@/firebase/init";
 //import VueFire from "VueFire"
@@ -48,8 +47,8 @@ export default {
   },
   components: {
     // mainBanner,
-    menuCard,
-    help
+    menuCard
+    //help
   },
   computed: {
     pageChange() {
@@ -88,11 +87,12 @@ export default {
       console.log("animation");
       const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
       //tl.to('.iText',{duration:1,color:"red"});
-      tl.to(".invitationPage", 1, { y: "-120%", duration: 1 });
+      tl.to("#invitationPage1", 1, { y: "-120%", duration: 1 });
       ///tl.to("#main", 1, { visibility: "100%", duration: 1, delay: 2 });
       tl.to(".mc", 2, { opacity: 1 });
       this.IP = false;
       this.CP = true;
+      document.getElementById("invitationPage1").style.height = "0vh";
       //{y:"-100%", duration:1},"-1");
     }
   }
@@ -105,6 +105,12 @@ export default {
   display: flex;
   justify-content: center;
 }
+h2 {
+  color: cornflowerblue;
+}
+.iText {
+  color: white;
+}
 #main {
   display: flex;
   /*display:none;*/
@@ -114,16 +120,20 @@ export default {
   height: 88vh;
   background-color: rgba(255, 255, 255, 0.7);
 }
-.invitationPage {
+#invitationPage1 {
   width: 100%;
   height: 88vh;
-  background-color: lightslategrey;
+  background-color: rgb(170, 170, 170);
   display: flex;
   font-family: "Lobster";
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: fixed;
+  background-position: 80% 50%;
+
+  /* background-size:100%;*/
+
+  background-image: url("../assets/piano2.jpg");
 }
 .card-img {
   border: 5px solid black !important;
@@ -152,6 +162,9 @@ export default {
   }
   .menuCard {
     margin-top: 30px;
+  }
+  #invitationPage {
+    text-align: center;
   }
 }
 </style>

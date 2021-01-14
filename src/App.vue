@@ -1,31 +1,36 @@
 <template>
   <div id="app">
     <Banner></Banner>
+    <help v-show="ifHelp" />
     <div
       class="alert alert-danger"
       id="answerWarning"
       v-if="alertV"
       role="alert"
-    >Please check the answer</div>
-    <router-view ></router-view>
+    >
+      Please check the answer
+    </div>
+    <router-view></router-view>
   </div>
 </template>
 <script>
 import Banner from "./components/Banner.vue";
+import help from "./components/help.vue";
 export default {
   name: "app",
   components: {
-    Banner
+    Banner,
+    help
   },
   data() {
     return {
       alertV: true
     };
   },
-  computed:{
-     ifHelp() {
+  computed: {
+    ifHelp() {
       return this.$store.state.ifHelp;
-    },
+    }
   },
   methods: {
     fetch() {
@@ -46,7 +51,9 @@ export default {
     fetch6() {
       this.$store.commit("fetchIntervalsT");
     },
-
+    ifHelpChange() {
+      this.$store.commit("ifHelpChange");
+    },
     fetch7() {
       this.$store.commit("fetchIDic");
     }

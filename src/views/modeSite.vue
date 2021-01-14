@@ -7,6 +7,7 @@
         imageLink="covers/LI.png"
         destination="ILBox"
         class=" mc col-12 col-lg-6 col-sm-12"
+        innerText="Donec mollis, erat in venenatis dictum, ipsum urna sollicitudin lectus, eget luctus erat enim aliquet enim. Nam metus dolor, vestibulum id pretium eu, rutrum eu mauris. "
       ></menuCard>
       <menuCard
         title="Train intervals"
@@ -14,6 +15,7 @@
         destination="trainModeTest"
         chapter="I1"
         class=" mc col-12 col-lg-6 col-sm-12"
+        innerText="Donec mollis, erat in venenatis dictum, ipsum urna sollicitudin lectus, eget luctus erat enim aliquet enim. Nam metus dolor, vestibulum id pretium eu, rutrum eu mauris. "
       ></menuCard>
     </div>
   </div>

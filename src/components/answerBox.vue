@@ -1,141 +1,5 @@
 <template>
   <div id="ansB" class="mb-4">
-    <!--  <keyboardBox/>--><!--
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-  
-   width="400px"
-   viewBox="0 0 76.162201 36.285713"
-   version="1.1"
-   id="svg8">
-  <defs
-     id="defs2" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     transform="translate(-24.94643,-112.92558)"
-     id="layer1">
-    <rect
-       style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.70886797;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect3848"
-       width="76.162201"
-       height="36.285713"
-       x="24.94643"
-       y="112.92558" 
-       class="white"/>
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="c"
-       width="6.8035712"
-       height="21.072172"
-       x="35.529758"
-       y="120.8631"
-       class="white" />
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="d"
-       width="6.8035712"
-       height="21.072172"
-       x="43.391663"
-       y="120.8631" 
-       class="white"/>
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="e"
-       width="6.8035712"
-       height="21.072172"
-       x="51.253567"
-       y="120.8631" 
-       class="white"/>
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="f"
-       width="6.8035712"
-       height="21.072172"
-       x="59.115471"
-       y="120.8631"
-       class="white" />
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="g"
-       width="6.8035712"
-       height="21.072172"
-       x="66.977379"
-       y="120.8631" 
-       class="white"/>
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="a"
-       width="6.8035712"
-       height="21.072172"
-       x="74.839287"
-       y="120.8631"
-       class="white" />
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.24443209;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="h"
-       width="6.8035712"
-       height="21.072172"
-       x="82.701195"
-       y="120.8631"
-       class="white" />
-    <rect
-       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="c#"
-       width="5.3453903"
-       height="13.016112"
-       x="40.239578"
-       y="120.81584"
-       class="black" />
-    <rect
-       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="d#"
-       width="5.3453903"
-       height="13.016112"
-       x="48.175335"
-       y="120.81584"
-       class="black" />
-    <rect
-       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="f#"
-       width="5.3453903"
-       height="13.016112"
-       x="63.671589"
-       y="120.81584"
-       class="black" />
-    <rect
-       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="g#"
-       width="5.3453903"
-       height="13.016112"
-       x="71.561417"
-       y="120.81584"
-       class="black" />
-    <rect
-       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="a#"
-       width="5.3453903"
-       height="13.016112"
-       x="79.445869"
-       y="120.81584"
-       class="black"/>
-  </g>
-</svg>-->
-    <!--<keyboardBox  v-bind:FN="triad.firstNote"  v-bind:SN="triad.secondNote" v-bind:file="this.file" v-bind:tryb="this.tryb"/>-->
     <keyboardBox
       tryb="I"
       v-bind:FN="this.FN"
@@ -143,9 +7,6 @@
       v-bind:file="this.file"
       v-bind:description="jshdgfjhg"
     />
-    <!--<button class="btn btn-secondary" @click="playInterval(FN, SN)">
-      Play
-    </button>-->
   </div>
 </template>
 <script>
@@ -242,7 +103,7 @@ export default {
   align-items: center;
   /*display: none;*/
   width: 80%;
-  display:flex;
+  display: flex;
 }
 div {
   display: flex;

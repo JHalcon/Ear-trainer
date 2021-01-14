@@ -4,7 +4,6 @@
       <h3 id="sectionTitle">Listen to the example of a whole triad</h3>
       <span id="triadInfo">
         <h4 class="triadInfo">{{ triad.text }}</h4>
-        <!--<h2 class="triadInfo">{{triad.qid}}</h2>-->
         <span class="invisible" id="titleSong">{{ triad.file }}</span>
       </span>
       <keyboardBox
@@ -13,17 +12,20 @@
         v-bind:SN="triad.secondNote"
         v-bind:TN="triad.thirdNote"
       />
-      <button id="NS" class="btn btn-secondary" @click="toGame()">
+      <button id="NS" class="btn btn-secondary mt-2" @click="toGame(triad.qid)">
         Next step
       </button>
       <triadTestBox v-bind:qid="triad.qid" />
       <div id="endPanel">
         <h2>End of the chapter</h2>
-        <button class="btn btn-primary" v-on:click="resetChapter">
+        <button class="btn btn-primary mb-3" v-on:click="resetChapter">
           Play again
         </button>
-        <button class="btn btn-secondary" @click="$router.push('/train')">
-          Back to chapter menu
+        <button class="btn btn-secondary mb-3 " @click="$router.push('/train'); resetChapter">
+          Back to the chapter menu
+        </button>
+        <button class="btn btn-light " @click="$router.push('/'); resetChapter">
+          Back to the main menu
         </button>
       </div>
     </div>
@@ -34,6 +36,9 @@ import keyboardBox from "../components/keyboardBox.vue";
 import triadTestBox from "../components/triadTestBox.vue";
 
 export default {
+  created(){
+this.resetChapter();
+  },
   components: {
     keyboardBox,
     triadTestBox
@@ -104,14 +109,12 @@ export default {
       this.endList = false;
       this.iteratorList = 0;
       this.selectedAns = "a";
-      ///this.resetGA();
-      //this.resetBA();
       let btn = document.getElementById("nextItem");
       btn.innerHTML = "Next";
       document.getElementById("answerWarning").style.display = "none";
     },
-    toGame() {
-      console.log("to Game jedzie");
+    toGame(a) {
+      console.log("to Game jedzie"+a);
       document.getElementById("keyBox").style.display = "none";
       document.getElementById("NS").style.display = "none";
       document.getElementById("triadInfo").style.display = "none";
@@ -162,6 +165,10 @@ export default {
       this.cReset();
       this.dReset();
       this.tNumberReset();
+    },
+    updated(){
+      console.log("reloaod");
+this.resetChapter();
     },
     playInterval(first, second) {
       this.playMusic();
@@ -220,7 +227,8 @@ img {
   display: flex;
   align-items: center;
   margin-top: 2vh;
-  width: 80%;
+  justify-content: center;
+  /*width: 80%;*/
 }
 #keyBox {
   /*display:flex;*/
@@ -237,7 +245,9 @@ div {
 #contentBox {
   display: flex;
   flex-direction: column;
-  width: 80vw;
+  /*width: 80vw;*/
+  width:100%;
+  justify-content: center;
 }
 .invisible {
   display: none;
@@ -268,5 +278,30 @@ h3 {
 #triadInfo {
   background-color: none;
   color: cornflowerblue;
+}
+@media (max-width: 700px) {
+  .buttons {
+    font-size: 0.5rem;
+  }
+  .btn {
+    font-size: 0.8rem !important;
+  }
+  #keyBox {
+    margin-bottom: none !important;
+  }
+  button {
+    height: 90%;
+    font-size: 1em;
+    
+  }
+  button.btn{
+margin-bottom: 5vh;
+  }
+}
+@media (max-width: 700px) and (orientation: landscape) {
+  #main {
+  height: 140vh;
+  margin-bottom:3vh;
+}
 }
 </style>

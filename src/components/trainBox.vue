@@ -7,7 +7,9 @@
         :key="product.id"
       >
         <div id="innerBoxQ" v-show="!hintV">
-          <h3 class="text-center mb-5" style="font-weight: bold">What interval can you hear?</h3>
+          <h3 class="text-center mb-4" style="font-weight: bold">
+            What interval can you hear?
+          </h3>
           <!-- <h4 class="question">{{product.text}}</h4>-->
           <div id="audio" class="player-wrapper">
             <div id="songTitle" class="invisible">
@@ -234,24 +236,7 @@ export default {
       }
     },
     hint() {
-      /* let box = document.getElementById("ansB");
-      let boxq = document.getElementById("innerBox");
-      // box.style.display = "flex";
-      if (this.hintV === true) {
-        console.log("zmiana na false");
-        this.hintV = false;
-        //let box = document.getElementById("ansB");
-        box.style.display = "flex";
-        console.log(this.hintV);
-        document.getElementById("hint").innerHTML = "show keys hint";
-        boxq.style.display = "flex !important";
-      } else if (this.hintV === false) {
-        document.getElementById("hint").innerHTML = "close keys hint";
-        this.hintV = true;
-        box.style.display = "none !important";
-        boxq.style.display = "flex !important";
-        console.log(this.hintV);
-      }*/
+      
       console.log("elo");
       if (this.spec == 0) {
         this.hintV = true;
@@ -270,10 +255,6 @@ export default {
   },
 
   playS: function(sound) {
-    /*if(sound) {
-        var audio = new Audio(sound);
-        audio.play();
-      }*/
     console.log(sound);
   }
 };
@@ -324,8 +305,7 @@ span {
 }
 #prl1 {
   background-color: rgba(255, 255, 255, 0.7);
-  height: 80vh;
-  //height: 90%;
+  height: 84vh;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -369,5 +349,58 @@ span {
 svg#svg8 {
   width: 550px !important;
   height: 350px !important;
+}
+.buttons {
+  font-size: medium;
+}
+@media (max-width: 700px) {
+  #prl1 {
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 88vh;
+    //height: 90%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 2%;
+    margin-bottom: 1%;
+  }
+  .buttons {
+    font-size: 0.5rem;
+  }
+
+  .btn {
+    font-size: 0.8rem !important;
+  }
+  #keyBox {
+    margin-bottom: none !important;
+  }
+  .buttons {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    // height:90%;
+    // font-size:1em;
+  }
+}
+@media (max-width: 700px) and (orientation: landscape) {
+  #prl1 {
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 120vh;
+    //height: 90%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 2%;
+    margin-bottom: 0%;
+  }
+  .innerContainer {
+    margin: 0 !important;
+  }
+  .mb-5 {
+    margin-bottom: 5px !important;
+  }
+  #innerBoxQ {
+    margin-bottom: 4vh;
+  }
 }
 </style>

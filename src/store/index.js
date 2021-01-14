@@ -33,7 +33,7 @@ export default new Vuex.Store({
     aud: new Audio("plik.mp3"),
     exerTest: [],
     isStarted: false,
-    ifHelp:true,
+    ifHelp:false,
     CP:true,
   },
   actions: {},

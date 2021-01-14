@@ -204,7 +204,7 @@ span {
 }
 .buttons {
   background-color: darkgray;
-  width: 80%;
+  //width: 80%;
   margin: auto;
   box-sizing: border-box;
   padding: 20px;
@@ -233,7 +233,7 @@ span #answer {
 }
 .innerContainer {
   width: 100%;
-  padding: 30px;
+  //padding: 30px;
 }
 #answer {
   display: none;

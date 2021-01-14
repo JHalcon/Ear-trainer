@@ -717,35 +717,41 @@ export default {
       let fnbtn = document.getElementById(fn);
       let snbtn = document.getElementById(sn);
       let tnbtn = document.getElementById(tn);
-      
-      setTimeout(()=>{fnbtn.setAttribute("style", "fill:rgb(255, 0, 0) !important");
-      setTimeout(
-        () => {
-          this.bwColorChange(fnbtn);
-          snbtn.setAttribute("style", "fill:rgb(81, 98, 247) !important");
-          setTimeout(() => {
-            this.bwColorChange(snbtn);
-            tnbtn.setAttribute("style", "fill:rgb(128,128,128) !important");
-            setTimeout(() => {
-              this.bwColorChange(tnbtn);
-              setTimeout(() => {
-                fnbtn.setAttribute("style", "fill:rgb(255, 0, 0) !important");
-                snbtn.setAttribute("style", "fill:rgb(81, 98, 247) !important");
-                tnbtn.setAttribute("style", "fill:rgb(128,128,128) !important");
-                setTimeout(() => {
-                  this.bwColorChange(fnbtn);
-                  this.bwColorChange(snbtn);
-                  this.bwColorChange(tnbtn);
-                }, 2000);
-              }, 200);
-            }, 1000);
-          }, 1000);
-        },
 
-        1000
-      );
-    },200);
-    
+      setTimeout(() => {
+        fnbtn.setAttribute("style", "fill:rgb(255, 0, 0) !important");
+        setTimeout(
+          () => {
+            this.bwColorChange(fnbtn);
+            snbtn.setAttribute("style", "fill:rgb(81, 98, 247) !important");
+            setTimeout(() => {
+              this.bwColorChange(snbtn);
+              tnbtn.setAttribute("style", "fill:rgb(128,128,128) !important");
+              setTimeout(() => {
+                this.bwColorChange(tnbtn);
+                setTimeout(() => {
+                  fnbtn.setAttribute("style", "fill:rgb(255, 0, 0) !important");
+                  snbtn.setAttribute(
+                    "style",
+                    "fill:rgb(81, 98, 247) !important"
+                  );
+                  tnbtn.setAttribute(
+                    "style",
+                    "fill:rgb(128,128,128) !important"
+                  );
+                  setTimeout(() => {
+                    this.bwColorChange(fnbtn);
+                    this.bwColorChange(snbtn);
+                    this.bwColorChange(tnbtn);
+                  }, 2000);
+                }, 200);
+              }, 1000);
+            }, 1000);
+          },
+
+          1000
+        );
+      }, 200);
     },
 
     colorBtn(key) {
@@ -872,6 +878,9 @@ svg#svg8 {
    margin-top:20px;*/
   height: 250px !important;
 }
+.innerContainer {
+  width: 100%;
+}
 rect#rect3850 {
   fill: rgb(185, 0, 0) !important;
 }
@@ -881,6 +890,9 @@ button {
 @media (max-width: 700px) {
   svg#svg8 {
     width: 320px !important;
+  }
+  #keyBox {
+    margin-bottom: 0% !important;
   }
 }
 @media (max-width: 700px) and (orientation: landscape) {
