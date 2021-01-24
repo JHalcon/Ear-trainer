@@ -57,11 +57,11 @@ export default {
     fetch7() {
       this.$store.commit("fetchIDic");
     },
-    resetIPP(){
-this.$store.commit("resetIPP");
+    resetIPP() {
+      this.$store.commit("resetIPP");
     },
-     resetCPP(){
-this.$store.commit("resetCPP");
+    resetCPP() {
+      this.$store.commit("resetCPP");
     }
   },
   mounted: function() {

@@ -19,7 +19,7 @@
           $router.push({
             name: destination,
             params: {
-              chapterMode: chapter 
+              chapterMode: chapter
             }
           })
         "
@@ -44,6 +44,11 @@ router-link {
 @media (max-width: 700px) {
   .menuCard {
     margin-top: 30px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .menuCard {
+    font-size: 1.1em;
   }
 }
 </style>

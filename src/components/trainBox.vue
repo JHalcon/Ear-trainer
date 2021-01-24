@@ -317,7 +317,7 @@ span {
 }
 #prl1 {
   background-color: rgba(255, 255, 255, 0.7);
-  min-height: 74vh;
+  min-height: 84vh;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -418,6 +418,14 @@ svg#svg8 {
   }
   #innerBoxQ {
     margin-bottom: 4vh;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .qbox {
+    min-height: 100% !important;
+  }
+  #innerBoxQ {
+    margin-bottom: 10vh;
   }
 }
 </style>

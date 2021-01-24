@@ -3,7 +3,7 @@
     <div id="main" class="row">
       <menuCard
         title="Learn material"
-        imageLink="covers/LI.png"
+        imageLink="covers/learnI.png"
         destination="ILBox"
         class=" mc col-12 col-lg-6 col-sm-12"
         innerText="Learn the most important information about the intervals. Listen to the examples that will make it easier for you to memorize the consonance. This will enable you to do the practical exercises."

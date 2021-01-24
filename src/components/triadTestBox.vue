@@ -251,10 +251,6 @@ export default {
           this.nextTriad();
         }
       }
-      /* this.isSelected = false;
-      } else {
-        warDiv.style.display = "block";
-      }*/
     },
     checkA() {
       let warDiv = document.getElementById("answerWarning");
@@ -311,10 +307,8 @@ span #answer {
 }
 #TriadBox {
   align-items: center;
-  /*width: 80%;*/
   width: 100%;
   margin: none;
-  // display:none;
 }
 .innerContainer {
   width: 100%;

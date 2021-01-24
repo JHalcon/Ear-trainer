@@ -347,4 +347,27 @@ export default {
     height: 80%;
   }
 }
+@media only screen and (min-width: 1800px) {
+  h1 {
+    font-size: 2.9em;
+  }
+  .bImg {
+    margin-bottom: 1vh;
+  }
+  #Capa_1 {
+    height: 4.4vh;
+  }
+  #arrow {
+    height: 5.6vh;
+    margin-right: 0;
+  }
+  #house {
+    height: 6vh;
+    margin-bottom: 5px;
+  }
+  #askImg {
+    height: 5vh;
+    margin-right: 0.4vw;
+  }
+}
 </style>

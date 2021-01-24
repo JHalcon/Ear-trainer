@@ -13,7 +13,7 @@
 
       <menuCard
         title="Interval dictation chapter 1"
-        imageLink="covers/I1.png"
+        imageLink="covers/intervalDictation.png"
         destination="intervalDicSite"
         chapter="I1"
         class="col-12 col-lg-4 col-sm-12"

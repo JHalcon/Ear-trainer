@@ -14,7 +14,9 @@
         After that you'll see a completed transcription with highlighted
         intervals
       </h5>
-      <h4 style="color:cornflowerblue" class="mb-1">Good luck and have fun!</h4>
+      <h4 style="color:rgb(72,72,72)" id="textgo" class="mb-1">
+        Good luck and have fun!
+      </h4>
       <button class="btn btn-primary mb-4" v-on:click="toDic">Let's try</button>
     </div>
     <div id="firstStepBox" v-show="firstStep">
@@ -84,7 +86,7 @@
           <img
             class="transcryptionImg"
             id="trImg"
-            src="IDic1.jpg"
+            src="intervalDic.png"
             v-on:click="makeBigImg"
           />
           <div class="cartonsBox">
@@ -106,7 +108,7 @@
             Reset transcription
           </button>
           <button v-on:click="backToiInt" class="btn btn-light mt-3">
-            Back to dictation view
+            Back to the dictation view
           </button>
         </div>
 
@@ -234,8 +236,8 @@ export default {
                   return;
                 }
               }, 12000);
-            }, 12000);
-          }, 11000);
+            }, 11000);
+          }, 11500);
         }, 11000);
       }, 11000);
     },
@@ -277,9 +279,9 @@ h5 {
 }
 #ex {
   position: fixed;
-
+  height: 5vh;
   top: 22vh;
-  right: 4vw;
+  right: 3vw;
   width: 4vw;
   z-index: 99999;
 }
@@ -302,7 +304,7 @@ h5 {
   position: fixed;
   margin: 0 auto;
   width: 90%;
-  height: 20%;
+  height: 40%;
   top: 30%;
   left: 5%;
   background-color: #0ff;
@@ -351,6 +353,7 @@ img {
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
+  background-color: cornflowerblue;
 }
 h4 {
   text-align: center;
@@ -446,14 +449,38 @@ h3 {
     width: 350px;
   }
   .cartonsBox {
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
   }
-  .cb {
-    width: 40%;
+  .cb1 {
+    width: 30%;
+    height: 100px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+  }
+  .carton {
+    width: 100px;
     height: 100px;
   }
+
+  .fullscreen {
+    z-index: 9999;
+    position: fixed;
+    margin: 0 auto;
+    width: 90%;
+    height: 20%;
+    top: 30%;
+    left: 5%;
+    background-color: #0ff;
+  }
 }
-@media (max-width: 850px) and(max-height: 400px) and (orientation: landscape) {
+@media (max-width: 800px) and (orientation: landscape) {
   #main {
     min-height: 110vh;
   }
@@ -465,7 +492,7 @@ h3 {
     justify-content: center;
   }
   .cb1 {
-    width: 30%;
+    width: 25%;
     height: 100px;
     align-items: center;
     justify-content: center;
@@ -479,6 +506,19 @@ h3 {
     width: 90%;
     height: 40%;
     top: 40%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .cartonsBox {
+    width: 47vw;
+  }
+  #prev {
+    background-color: cornflowerblue;
+    text-align: center;
+    height: 60vh;
+  }
+  #textgo {
+    color: grey;
   }
 }
 </style>

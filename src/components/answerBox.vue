@@ -108,4 +108,9 @@ rect#rect3850 {
     margin-bottom: 20px;
   }
 }
+@media only screen and (min-width: 1800px) {
+  #ansB {
+    min-height: 120% !important;
+  }
+}
 </style>
