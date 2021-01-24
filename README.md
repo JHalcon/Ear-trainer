@@ -1,4 +1,4 @@
-# Vuex1
+# Ear Trainer
 
 ## Project setup
 ```
