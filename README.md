@@ -1,4 +1,4 @@
-# vuex1
+# Ear Trainer
 
 ## Project setup
 ```
@@ -10,15 +10,7 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Requirments
+BootstrapVue
+Firebase
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
