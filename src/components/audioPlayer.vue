@@ -26,7 +26,7 @@ export default {
   display: none;
 }
 
-audio{
-  height:40px;
+audio {
+  height: 40px;
 }
 </style>
