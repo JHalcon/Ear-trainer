@@ -860,12 +860,10 @@ img {
   display: none;
 }
 #keyBox {
-  /*display:flex;*/
   align-items: center;
   flex-direction: column;
   align-items: center;
   margin-bottom: 2%;
-  z-index: 3;
 }
 div {
   display: flex;
@@ -874,8 +872,6 @@ div {
 }
 svg#svg8 {
   width: 480px !important;
-  /*margin-bottom:20px;
-   margin-top:20px;*/
   height: 250px !important;
 }
 .innerContainer {

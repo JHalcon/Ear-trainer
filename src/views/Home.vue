@@ -1,15 +1,16 @@
 <template>
   <div class="all">
-    <div id="invitationPage1">
-      <div id="invitationPage" v-show="IP">
+    <div id="invitationPage1" v-show="IPP">
+      <div id="invitationPage" v-show="IPP">
         <h1 class="iText">Walcome to Ear Trainer App</h1>
-        <h2 style="color:cornflowerblue">Lets start learn some music</h2>
+        <h2 style="color:cornflowerblue">Let's start learning some music</h2>
         <button v-on:click="animation" class="btn btn-dark">Play</button>
       </div>
     </div>
-    <div id="main" class="container" v-show="CP">
+    <div id="main" class="container" v-show="CPP">
       <div class="row main">
         <menuCard
+          id="menuc1"
           class="mc col-12 col-lg-6 col-sm-12"
           title="Train mode"
           imageLink="covers/trainmode.png"
@@ -18,6 +19,7 @@
           You can start with simple hearing tasks but if you already have some skills we have more advanced challanges as well."
         ></menuCard>
         <menuCard
+          id="menuc2"
           class="mc col-12 col-sm-12 col-lg-6"
           title="Test mode"
           imageLink="covers/testmode.png"
@@ -33,24 +35,27 @@
 <script>
 import menuCard from "../components/menuCard.vue";
 import { gsap } from "gsap";
-//import help from "../components/help.vue";
-//import firebase from "@/firebase/init"
 import db from "@/firebase/init";
-//import VueFire from "VueFire"
 export default {
   name: "Home",
   data() {
     return {
-      IP: true,
-      CP: false
+      IP: false,
+      CP: true
     };
   },
   components: {
-    // mainBanner,
     menuCard
-    //help
+  },
+  created() {
+    this.IP = true;
+    console.log("shghs");
+    document.getElementById("menuc1").style.opacity = "0%";
   },
   computed: {
+    badA() {
+      return this.$store.state.IPP;
+    },
     pageChange() {
       return {
         invitationPage: this.IP
@@ -61,20 +66,30 @@ export default {
     },
     ifHelp() {
       return this.$store.state.ifHelp;
+    },
+    IPP() {
+      return this.$store.state.IPP;
+    },
+    CPP() {
+      return this.$store.state.CPP;
     }
   },
   methods: {
     created() {
-      console.log("hfshgfs");
       db.collection.get("testOne").then(snapshot => {
         snapshot.forEach(doc => {
           console.log(doc);
         });
       });
     },
+    changeIPP() {
+      this.$store.commit("changeIPP");
+    },
+    changeCPP() {
+      this.$store.commit("changeCPP");
+    },
     changeIP() {
       this.IP = false;
-      /// this.CP = true;
       this.changeCP;
     },
     changeCP() {
@@ -84,23 +99,31 @@ export default {
       this.invitationP = true;
     },
     animation() {
+      document.getElementById("menuc1").style.opacity = "0%";
+      document.getElementById("menuc2").style.opacity = "0%";
+
       console.log("animation");
       const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-      //tl.to('.iText',{duration:1,color:"red"});
-      tl.to("#invitationPage1", 1, { y: "-120%", duration: 1 });
-      ///tl.to("#main", 1, { visibility: "100%", duration: 1, delay: 2 });
+
+      console.log("animation2");
+      tl.to("#invitationPage", 1, { opacity: "0", duration: 1 });
+      tl.to("#invitationPage1", 1, { height: "0vh", duration: 1 });
+      console.log("animation3");
       tl.to(".mc", 2, { opacity: 1 });
-      this.IP = false;
-      this.CP = true;
-      document.getElementById("invitationPage1").style.height = "0vh";
-      //{y:"-100%", duration:1},"-1");
+      setTimeout(() => {
+        this.changeCPP();
+      }, 1000);
+      setTimeout(() => {
+        this.changeIPP();
+      }, 2000);
+      this.visited = true;
     }
   }
 };
 </script>
 <style scoped>
 .mc {
-  opacity: 0;
+  opacity: 100%;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -113,9 +136,7 @@ h2 {
 }
 #main {
   display: flex;
-  /*display:none;*/
   flex-direction: row;
-  /*padding-top: 10vh;*/
   justify-content: space-around;
   height: 88vh;
   background-color: rgba(255, 255, 255, 0.7);
@@ -131,12 +152,14 @@ h2 {
   flex-direction: column;
   background-position: 80% 50%;
 
-  /* background-size:100%;*/
-
   background-image: url("../assets/piano2.jpg");
 }
+
 .card-img {
   border: 5px solid black !important;
+}
+#invitationPage > button {
+  font-family: roboto;
 }
 #invitationPage {
   display: flex;
@@ -152,7 +175,7 @@ h2 {
 .main {
   width: 100%;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .row {
     margin-bottom: 20px;
     margin-top: none;
@@ -165,6 +188,23 @@ h2 {
   }
   #invitationPage {
     text-align: center;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 800px) and (orientation: landscape) {
+  #main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 200vh;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+@media (min-width: 1200px) {
+  #invitationPage {
+    font-size: 100px;
   }
 }
 </style>

@@ -4,74 +4,71 @@
       <div class="row">
         <div class="col-12  col-lg-2 whiteInput ">
           <span v-if="checkform" id="span1">
-            <span class="goodA" v-if="ea1">Empty answer box!</span>
-            <span class="goodA" v-if="gai1">This is correct answer</span>
-            <span class="badA" v-if="bai1">This is wrong answer</span>
+            <span class="emptyB" v-if="ea1">Empty answer box!</span>
+            <span class="goodA" v-if="gai1">This is a correct answer</span>
+            <span class="badA" v-if="bai1">This is a wrong answer</span>
           </span>
           <input
             type="text"
             id="aI1"
-            class="form-control w-50"
+            class="form-control w-100 mt-2"
             placeholder="First interval"
           />
         </div>
         <div class="col-12 col-lg-2 whiteInput">
           <span v-if="checkform" id="span2">
-            <span class="goodA" v-if="ea2">Empty answer box!</span>
-            <span class="goodA" v-if="gai2">This is correct answer</span>
-            <span class="badA" v-if="bai2">This is wrong answer</span></span
+            <span class="emptyB" v-if="ea2">Empty answer box!</span>
+            <span class="goodA" v-if="gai2">This is a correct answer</span>
+            <span class="badA" v-if="bai2">This is a wrong answer</span></span
           >
           <input
             type="text"
             id="aI2"
-            class="form-control w-50"
+            class="form-control w-100 mt-2"
             placeholder="Second interval"
           />
         </div>
         <div class="col-12 col-lg-2 whiteInput">
           <span v-if="checkform" id="span3">
-            <span class="goodA" v-if="ea3">Empty answer box!</span>
-            <span class="goodA" v-if="gai3">This is correct answer</span>
-            <span class="badA" v-if="bai3">This is wrong answer</span></span
+            <span class="emptyB" v-if="ea3">Empty answer box!</span>
+            <span class="goodA" v-if="gai3">This is a correct answer</span>
+            <span class="badA" v-if="bai3">This is a wrong answer</span></span
           >
           <input
             type="text"
             id="aI3"
-            class="form-control w-50"
+            class="form-control w-100 mt-2"
             placeholder="Third interval"
           />
         </div>
         <div class="col-12 col-lg-2 whiteInput" id="span4">
           <span v-if="checkform">
-            <span class="goodA" v-if="ea4">Empty answer box!</span>
-            <span class="goodA" v-if="gai4">This is correct answer</span>
-            <span class="badA" v-if="bai4">This is wrong answer</span></span
+            <span class="emptyB" v-if="ea4">Empty answer box!</span>
+            <span class="goodA" v-if="gai4">This is a correct answer</span>
+            <span class="badA" v-if="bai4">This is a wrong answer</span></span
           >
           <input
             type="text"
             id="aI4"
-            class="form-control w-50"
+            class="form-control w-100 mt-2"
             placeholder="Fourth interval"
           />
         </div>
         <div class="col-12 col-lg-2 whiteInput">
           <span v-if="checkform" id="span5">
-            <span class="goodA" v-if="ea5">Empty answer box!</span>
-            <span class="goodA" v-if="gai5">This is correct answer</span>
-            <span class="badA" v-if="bai5">This is wrong answer</span></span
+            <span class="emptyB" v-if="ea5">Empty answer box!</span>
+            <span class="goodA" v-if="gai5">This is a correct answer</span>
+            <span class="badA" v-if="bai5">This is a wrong answer</span></span
           >
           <input
             type="text"
             id="aI5"
-            class="form-control w-50 h-50"
+            class="form-control w-100 h-50 mt-2"
             placeholder="Fifth interval"
           />
         </div>
       </div>
     </form>
-
-    <!--<h2 class="triadInfo">{{triad.qid}}</h2>-->
-
     <button id="NS" class="btn btn-secondary" @click="checkDic()">
       Check dictation
     </button>
@@ -216,7 +213,30 @@ img {
   justify-content: center;
   align-items: center;
 }
-
+span.badA {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+span.goodA {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+span.emptyB {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+}
 div#imputsI {
   display: flex;
   justify-content: center;

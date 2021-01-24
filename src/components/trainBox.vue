@@ -10,13 +10,11 @@
           <h3 class="text-center mb-4" style="font-weight: bold">
             What interval can you hear?
           </h3>
-          <!-- <h4 class="question">{{product.text}}</h4>-->
           <div id="audio" class="player-wrapper">
             <div id="songTitle" class="invisible">
               {{ product.file }}
             </div>
             <span id="answer" class="invisible">{{ product.correct }}</span>
-            <!--	<audio-player file='product.file'></audio-player>-->
           </div>
           <audio id="id1" v-bind:src="product.file"></audio>
           <p id="titleSong">{{ product.file }}</p>
@@ -48,7 +46,7 @@
               >Great! this is correct answer</span
             >
             <span id="wrongA" v-show="!correctA" class="redT"
-              >Sorry this is wrong answer</span
+              >Sorry this is a wrong answer</span
             >
           </div>
         </div>
@@ -66,23 +64,27 @@
           <button id="hint" class="btn btn-light mr-2" v-on:click="hint">
             Keys hint
           </button>
-
           <button id="nextItem" class="btn btn-dark" v-on:click="nextT">
             Next
           </button>
         </div>
       </div>
       <div id="summary">
-        <h3>Training is completed</h3>
-        <button class="btn btn-primary" v-on:click="resetGame">
+        <h3 class="mb-4">Training is completed</h3>
+        <button class="btn btn-primary mb-4" v-on:click="resetGame">
           Try again
+        </button>
+        <button class="btn btn-dark mb-4" @click="$router.push('/modeSite')">
+          Back to chapter menu
+        </button>
+        <button class="btn btn-light" @click="$router.push('/')">
+          Back to main menu
         </button>
       </div>
     </div>
   </div>
 </template>
 <script>
-// @ is an alias to /src
 import answerBox from "../components/answerBox.vue";
 
 export default {
@@ -93,9 +95,6 @@ export default {
     }
   },
   computed: {
-    /* products(){
-      return this.$store.getters.getData("C");
-    },*/
     products() {
       return this.$store.getters.search(this.chapter);
     },
@@ -135,12 +134,11 @@ export default {
   },
   methods: {
     selectAnswer(e) {
-      console.log(e.currentTarget.value);
+      document.getElementById("comm").style.display = "none";
       let odp = e.currentTarget.value;
       this.selectedAns = odp;
       let correctAnswer = document.getElementById("answer").innerText;
       this.isASelected = true;
-      console.log(correctAnswer);
       if (odp === correctAnswer) {
         console.log("good answer");
         this.correctA = true;
@@ -169,8 +167,15 @@ export default {
     resetBA() {
       this.$store.commit("resetBA");
     },
+    checkIfSelected() {
+      console.log("sprawdzam czy zaznaczone");
+      console.log(this.selecedAns);
+      if (this.isASelected == false) return false;
+      else return true;
+    },
     checkAnswer: function() {
       console.log(this.selectedAns);
+
       let correctAnswer = document.getElementById("answer").innerText;
       console.log("dobra odp" + correctAnswer);
       if (this.selectedAns === correctAnswer) {
@@ -184,21 +189,31 @@ export default {
 
     checkA() {
       console.log("hgsfhgf");
-      if (this.isASelected == true) {
-        this.checkMode = true;
-        let ans = document.getElementById("answer").innerText;
-        console.log(ans);
-        if (this.selectedAns == ans) console.log("yesss");
-        else {
-          console.log("no no");
+      let warDiv = document.getElementById("answerWarning");
+
+      if (this.checkIfSelected() == true) {
+        warDiv.style.display = "none";
+        document.getElementById("comm").style.display = "flex";
+        if (this.isASelected == true) {
+          this.checkMode = true;
+          let ans = document.getElementById("answer").innerText;
+          console.log(ans);
+          if (this.selectedAns == ans) console.log("yesss");
+          else {
+            console.log("no no");
+          }
+        } else {
+          console.log("nie ma praw");
         }
       } else {
-        console.log("nie ma praw");
+        warDiv.style.display = "block";
       }
     },
     showResoult() {},
     nextT() {
+      document.getElementById("answerWarning").style.display = "none";
       console.log(this.tabSize);
+      this.isASelected = false;
       this.hintV = false;
       this.checkMode = false;
       if (this.b == this.tabSize - 1) {
@@ -212,6 +227,7 @@ export default {
 
     nextQuestion() {
       let box = document.getElementById("ansB");
+      this.isASelected = false;
       box.style.display = "none";
       if (this.endList === true) {
         this.resetGame();
@@ -231,31 +247,29 @@ export default {
         if (this.iteratorList === this.productsSize) {
           this.endList = true;
           btn.innerHTML = "Play again";
-          //this.showResoult();
         }
       }
     },
     hint() {
-      
-      console.log("elo");
       if (this.spec == 0) {
         this.hintV = true;
+        document.getElementById("hint").innerHTML = "Hide hint";
         this.spec++;
       } else {
+        document.getElementById("hint").innerHTML = "Keys hint";
         this.hintV = false;
         this.spec -= this.spec;
       }
     },
     opop() {
-      // console.log(text);
       let audio1 = document.getElementById("titleSong").textContent;
       let aud = new Audio(audio1);
       aud.play();
-    }
-  },
+    },
 
-  playS: function(sound) {
-    console.log(sound);
+    playS: function(sound) {
+      console.log(sound);
+    }
   }
 };
 </script>
@@ -274,12 +288,10 @@ export default {
 
 span {
   display: flex;
-  //background-color: cornflowerblue;
-  //border: 2px solid white;
 }
 .buttons {
   background-color: darkgray;
-  width: 80%;
+  margin: auto;
   margin: auto;
   box-sizing: border-box;
   padding: 20px;
@@ -305,7 +317,7 @@ span {
 }
 #prl1 {
   background-color: rgba(255, 255, 255, 0.7);
-  height: 84vh;
+  min-height: 74vh;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -330,6 +342,9 @@ span {
   margin-bottom: 50px;
   margin-top: 20px;
 }
+span {
+  font-size: 20px;
+}
 .greenT {
   color: green;
 }
@@ -352,20 +367,25 @@ svg#svg8 {
 }
 .buttons {
   font-size: medium;
+  width: 80%;
 }
 @media (max-width: 700px) {
   #prl1 {
     background-color: rgba(255, 255, 255, 0.7);
-    height: 88vh;
-    //height: 90%;
+    min-height: 78vh;
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    margin-top: 2%;
-    margin-bottom: 1%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  .innerContainer {
+    margin-bottom: 0;
+    padding-left: 20px;
   }
   .buttons {
     font-size: 0.5rem;
+    margin-bottom: 3vh;
   }
 
   .btn {
@@ -378,20 +398,17 @@ svg#svg8 {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
-    // height:90%;
-    // font-size:1em;
   }
 }
 @media (max-width: 700px) and (orientation: landscape) {
   #prl1 {
     background-color: rgba(255, 255, 255, 0.7);
-    height: 120vh;
-    //height: 90%;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     box-sizing: border-box;
     margin-top: 2%;
-    margin-bottom: 0%;
+    margin-bottom: 2vh;
   }
   .innerContainer {
     margin: 0 !important;

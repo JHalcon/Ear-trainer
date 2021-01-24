@@ -1,14 +1,21 @@
 <template>
   <div id="main" class="container p-1">
     <div id="prev" v-show="!firstStep">
-      <h3 style="color:white">Try to face with well known from music lessons exercise - inerval dictation!</h3>
-      <h4 class="m-3">
-        At first you have to listen to the whole record and than write down
-        interval symbols in the correct order.
-       <span style="text-align:center"> After that you'll can see completed transcription with highlighted intervals</span>
-      </h4>
-      <h4 style="color:cornflowerblue" class="mb-4">Good luck and have fun!</h4>
-      <button class="btn btn-primary" v-on:click="toDic">Lets try</button>
+      <h3 style="color:white">
+        Try to face a well known exercise used in music schools - interval
+        dictation!
+      </h3>
+      <img src="nuty.png" id="nuty" />
+      <h5 class="m-3" style="color:white">
+        Firstly, you have to listen to the whole recording and then you have to
+        write down interval symbols in the correct order.
+      </h5>
+      <h5>
+        After that you'll see a completed transcription with highlighted
+        intervals
+      </h5>
+      <h4 style="color:cornflowerblue" class="mb-1">Good luck and have fun!</h4>
+      <button class="btn btn-primary mb-4" v-on:click="toDic">Let's try</button>
     </div>
     <div id="firstStepBox" v-show="firstStep">
       <div id="contentBox" v-for="i in IDics.slice(c, d)" :key="i.id">
@@ -35,8 +42,6 @@
             Go to transcription
           </button>
         </div>
-
-        <!--<h2 class="triadInfo">{{triad.qid}}</h2>-->
         <div id="transcryption" v-show="trVisible">
           <div>
             <svg
@@ -83,28 +88,18 @@
             v-on:click="makeBigImg"
           />
           <div class="cartonsBox">
-            <div class="carton" id="c1"></div>
-            <div class="carton" id="c2"></div>
-            <div class="carton" id="c3"></div>
-            <div class="carton" id="c4"></div>
-            <div class="carton" id="c5"></div>
+            <div class="cb1"><div class="carton" id="c1"></div></div>
+            <div class="cb1"><div class="carton" id="c2"></div></div>
+            <div class="cb1"><div class="carton" id="c3"></div></div>
+            <div class="cb1"><div class="carton" id="c4"></div></div>
+            <div class="cb1"><div class="carton" id="c5"></div></div>
           </div>
-          <!--
-          <div class="cartonsBox2">
-            <div class="row">
-            <div class="carton2 col-6" id="c1"></div>
-            <div class="carton2 col-6" id="c2"></div>
-            </div>
-            <div class="row">
-            <div class="carton2 col-4" id="c3"></div>
-            <div class="carton2 col-4" id="c4"></div>
-            <div class="carton2 col-4" id="c5"></div>
-            </div>
-          </div>
-          -->
-
           <audio-player :fileName="i.fileAll" class="invisible" />
-          <button class="btn btn-primary mt-3" style="margin:0" v-on:click="Animate">
+          <button
+            class="btn btn-primary mt-3"
+            style="margin:0"
+            v-on:click="Animate"
+          >
             Show intervals
           </button>
           <button v-on:click="resetD" class="btn btn-secondary mt-3">
@@ -146,7 +141,7 @@ export default {
       trVisible: false,
       fstopped: false,
       imgBigVisible: false,
-      firstStep:false,
+      firstStep: false
     };
   },
   computed: {
@@ -157,7 +152,6 @@ export default {
   methods: {
     toDic() {
       console.log("ssfd");
-      //this.prevVisible = false;
       this.firstStep = true;
     },
     resetD() {
@@ -188,7 +182,7 @@ export default {
       this.trVisible = true;
       console.log(this.trVisible);
     },
-    backToiInt(){
+    backToiInt() {
       this.trVisible = false;
     },
     Animate() {
@@ -244,12 +238,11 @@ export default {
           }, 11000);
         }, 11000);
       }, 11000);
-      // c1.style.backgroundColor = "white";
     },
     bigImg() {
       console.log("dhh");
     },
-    makeBigImg(){
+    makeBigImg() {
       document.getElementById("trImg").className = "fullscreen";
 
       this.imgBigVisible = true;
@@ -276,9 +269,11 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /*height:100%;*/
   margin-top: 2%;
   width: 100%;
+}
+h5 {
+  text-align: center;
 }
 #ex {
   position: fixed;
@@ -289,7 +284,7 @@ export default {
   z-index: 99999;
 }
 #main {
-  height: 84vh;
+  min-height: 84vh;
 }
 #firstStep {
   display: flex;
@@ -315,15 +310,7 @@ export default {
 .cartonsBox {
   display: flex;
   justify-content: space-around;
-  width: 55vw;
-  padding-left: 30px;
-  margin-bottom: 30px;
-}
-.cartonsBox2 {
-  display: flex;
-  justify-content: space-around;
-  width: 55vw;
-  padding-left: 30px;
+  width: 60vw;
   margin-bottom: 30px;
 }
 .strip {
@@ -334,7 +321,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.blueText{
+.blueText {
   color: cornflowerblue;
 }
 .transcryptionImg {
@@ -352,17 +339,6 @@ export default {
   justify-content: center;
   flex-direction: column;
 }
-.carton2 {
-  width: 100px;
-  height: 120px;
-  background-color: cornflowerblue;
-  font-size: 40px;
-  border-radius: 5px;
-  margin: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 img {
   width: 40%;
 }
@@ -376,15 +352,18 @@ img {
   padding-left: 50px;
   padding-right: 50px;
 }
-h4{
+h4 {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
 }
-span{
+span {
   text-align: center;
 }
 
 #main {
-  
   display: flex;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.7);
@@ -395,15 +374,10 @@ span{
   width: 80%;
 }
 
-/*div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}*/
 #contentBox {
   display: flex;
   flex-direction: column;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
 }
 .invisible {
@@ -420,8 +394,9 @@ rect#rect3850 {
 }
 h3 {
   margin: 20px !important;
+  text-align: center;
 }
-#prev{
+#prev {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -437,25 +412,29 @@ h3 {
   margin: 10px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .cartonsBox {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    /*justify-content: space-around;*/
-    width: 55vw;
-    padding-left: 30px;
-    margin-bottom: 30px;
   }
-  
+
+  .carton {
+    width: 100px;
+    height: 100px;
+  }
+  #prev {
+    background-color: cornflowerblue;
+    text-align: center;
+  }
   #main {
-    height: 140vh;
+    min-height: 100vh;
     width: 100%;
     margin-bottom: 2vh;
   }
   h3 {
-    font-size: 1.4em;
+    font-size: 1.8em;
   }
   .btn {
     margin: 1%;
@@ -463,19 +442,43 @@ h3 {
   audio {
     width: 70%;
   }
-}
-@media (max-width: 700px) and (orientation: landscape) {
-  #main {
-    height: 270vh;
+  img#nuty {
+    width: 350px;
   }
-  .carton{
-    width:50%;
+  .cartonsBox {
+    margin-top: 20px;
+  }
+  .cb {
+    width: 40%;
+    height: 100px;
+  }
+}
+@media (max-width: 850px) and(max-height: 400px) and (orientation: landscape) {
+  #main {
+    min-height: 110vh;
+  }
+  .cartonsBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+  }
+  .cb1 {
+    width: 30%;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+  }
+  .carton {
+    width: 100px;
+    height: 100px;
   }
   .fullscreen {
-  width: 90%;
-  height: 40%;
-  top:40%;
-  
-}
+    width: 90%;
+    height: 40%;
+    top: 40%;
+  }
 }
 </style>

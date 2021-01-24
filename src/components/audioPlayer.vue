@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pl">
     <figure>
       <figcaption>{{ description }}</figcaption>
       <div><audio id="player" controls :src="fileName"></audio></div>
@@ -24,5 +24,9 @@ export default {
 <style lang="scss">
 .invisible {
   display: none;
+}
+
+audio{
+  height:40px;
 }
 </style>

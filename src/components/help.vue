@@ -38,12 +38,12 @@
       </svg>
       <h2 style="color:cornflowerblue">About App</h2>
       <h3>
-        Welcome to the Ear Trainer – a web app that will help you to increase
-        you music hearing skills. Start with the train mode where you can learn
-        theory of intervals and triands. Than we prepared for you some exercises
-        to train the variuos music skills. If you feel confident with your
-        knowladge go to test mode and try to face with test contains various
-        questions from known chapters.
+        Welcome to the Ear Trainer – a web app that will help you increase you
+        music hearing skills. Start with the train mode where you can learn
+        theory of intervals and triands. Then we prepared for you some exercises
+        to train variuos music skills. If you feel confident with your knowladge
+        go to test mode and try to face a test which contains various questions
+        from the chapters you have done.
       </h3>
     </div>
   </div>
@@ -74,7 +74,7 @@ export default {
 <style scoped>
 #helpDiv {
   background-color: rgba(71, 71, 71, 0.4);
-  height: 88vh;
+  min-height: 88vh;
   color: ghostwhite;
   padding: 10vh;
   z-index: 2;
@@ -90,6 +90,7 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 80vw;
 }
 h2 {
   margin-bottom: 4vh;
@@ -105,10 +106,10 @@ svg#ex {
   svg#ex {
     width: 6vw;
     right: 5vw;
-    top: 26vh;
+    top: 18vh;
   }
   #helpDiv {
-    height: 200vh;
+    min-height: 130vh;
     padding: 6vh;
     top: 12vh;
     align-items: flex-start;
@@ -119,7 +120,7 @@ svg#ex {
     margin-right: auto;
     margin-left: auto;
     position: fixed;
-    height: 60vh;
+    height: 70vh;
     background-color: grey;
     align-items: center;
     display: flex;
@@ -135,14 +136,12 @@ svg#ex {
     top: 15vh !important;
   }
   #helpDiv {
-    height: 200vh;
-    /*padding:6vh;*/
+    min-height: 200vh;
     top: 0px;
     align-items: none;
     justify-content: center;
   }
   #hdInner {
-    /*margin-top: 5vh;*/
     margin-bottom: 2vh;
     margin-right: auto;
     margin-left: auto;

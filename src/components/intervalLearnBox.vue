@@ -1,7 +1,7 @@
 <template v-if="triadExVisibility" :key="updateBox">
   <div id="ILB" class="container">
     <div class="row" v-for="t in intervalsT.slice(a, b)" :key="t.id">
-      <div class="col-12 col-lg-6" id="left">
+      <div class="col-12 col-sm-12 col-lg-6" id="left">
         <h3 style="color:white; font-family:Tahoma">{{ t.name }}</h3>
         <img v-bind:src="t.img" />
 
@@ -13,15 +13,25 @@
           <span style="display:inline">Semitones:</span
           ><span class="whiteL"> {{ t.poltony }}</span>
         </h5>
-        <h5 class="whiteL">Example in song 1</h5>
-        <audioPlayer v-bind:fileName="t.file" v-bind:description="t.fileName" />
-        <h5 class="whiteL">Example in song 2</h5>
-        <audioPlayer v-bind:fileName="t.file" v-bind:description="t.fileName" />
+        <h5 class="whiteL">Example in song (ascending) - {{ t.upname }}</h5>
+        <audioPlayer
+          class="pl"
+          v-bind:fileName="t.upf"
+          v-bind:description="t.fileName"
+        />
+        <h5 class="whiteL">
+          Example in song 2 (descending) - {{ t.downname }}
+        </h5>
+        <audioPlayer
+          v-bind:fileName="t.downf"
+          v-bind:description="t.fileName"
+        />
         <div id="titleSong">
           {{ t.file }}
         </div>
       </div>
-      <div class="col-12 col-lg-6" id="right">
+      <div class="col-12 col-lg-6 col-sm-12" id="right">
+        <h3 style="color: cornflowerblue">Listen to the interval</h3>
         <keyboardBox
           tryb="I"
           v-bind:FN="t.firstNote"
@@ -39,7 +49,10 @@
       <button class="btn btn-primary mt-4  mb-3 sb" v-on:click="resetGame">
         Learn intervals again
       </button>
-      <button class="btn btn-dark mt-2 mb-3 sb" @click="$router.push('/modeSite')">
+      <button
+        class="btn btn-dark mt-2 mb-3 sb"
+        @click="$router.push('/modeSite')"
+      >
         Back to the chapter menu
       </button>
       <button class="btn btn-light mt-2 sb" @click="$router.push('/')">
@@ -98,8 +111,6 @@ export default {
 <style lang="scss" scoped>
 svg#svg8 {
   width: 90% !important;
-  /*margin-bottom:20px;
-   margin-top:20px;*/
   height: 90% !important;
 }
 #ILB {
@@ -110,8 +121,8 @@ svg#svg8 {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   padding: 15px;
 }
 .row {
@@ -145,6 +156,10 @@ svg#svg8 {
   flex-direction: column;
   padding: 5vh;
 }
+audio#player {
+  height: 40px !important;
+  width: 200px !important;
+}
 #summary {
   display: none;
   flex-direction: column;
@@ -167,6 +182,9 @@ h5.desc:last-child {
 h5 {
   margin-top: 10px;
 }
+img {
+  min-height: 20vh;
+}
 @media (max-width: 700px) {
   .row {
     margin-bottom: 20px;
@@ -177,32 +195,42 @@ h5 {
     margin-top: 20px;
     height: 70vh;
   }
+  .pl {
+    height: 40px !important;
+    width: 200px !important;
+  }
   #ILB {
     height: 95%;
+    margin-top: 3vh;
   }
   svg#svg8 {
     width: 250px !important;
   }
-
-  @media (max-width: 700px) {
-    svg#svg8 {
-      width: 450px !important;
-    }
-    #summary{
-      height:84vh;
-    }
-    button.sb{
-        margin-top:10vh
-    }
+}
+@media (max-width: 700px) {
+  svg#svg8 {
+    width: 450px !important;
   }
+  #summary {
+    height: 84vh;
+  }
+  button.sb {
+    margin-top: 10vh;
+  }
+  img {
+    width: 120%;
+  }
+}
 
-  @media (max-width: 700px) and (orientation: landscape) {
-    #ILB {
-      height: 100%;
-    }
-    #right {
-      height: 110vh;
-    }
+@media all and (max-width: 900px) and (orientation: landscape) {
+  #ILB {
+    height: 100% !important;
+  }
+  #right {
+    min-height: 110vh;
+  }
+  img {
+    width: 100%;
   }
 }
 </style>

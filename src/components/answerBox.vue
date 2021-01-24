@@ -1,5 +1,5 @@
 <template>
-  <div id="ansB" class="mb-4">
+  <div id="ansB">
     <keyboardBox
       tryb="I"
       v-bind:FN="this.FN"
@@ -44,64 +44,46 @@ export default {
       let btn2 = document.getElementById(second);
       let btn1 = document.getElementById(first);
       console.log(btn1);
-      btn1.setAttribute("style", "fill:rgb(255, 0, 0) !important"); //czarne c
+      btn1.setAttribute("style", "fill:rgb(255, 0, 0) !important");
       setTimeout(() => {
         btn1.setAttribute("style", "fill:rgb(255, 255, 255) !important");
-        btn2.setAttribute("style", "fill:rgb(81, 98, 247) !important"); //biale c
+        btn2.setAttribute("style", "fill:rgb(81, 98, 247) !important");
         setTimeout(() => {
           if (btn2.classList.contains("white"))
             btn2.setAttribute("style", "fill:rgb(255,255,255) !important");
           else btn2.setAttribute("style", "fill:rgb(0,0,0) !important");
-          btn1.setAttribute("style", "fill:rgb(255,255,255) !important"); // rozowe E
-          setTimeout(
-            () => {
-              btn1.setAttribute("style", "fill:rgb(255,0,0) !important");
-              btn2.setAttribute("style", "fill:rgb(81, 98, 247) !important");
-              setTimeout(() => {
-                if (btn1.classList.contains("white")) {
-                  console.log("OOO");
-                  btn1.setAttribute(
-                    "style",
-                    "fill:rgb(255,255,255) !important"
-                  );
-                } else {
-                  console.log("hgafshf");
-                  btn1.setAttribute("style", "fill:rgb(0,0,0) !important");
-                }
-                if (btn2.classList.contains("white"))
-                  btn2.setAttribute(
-                    "style",
-                    "fill:rgb(255,255,255) !important"
-                  );
-                else {
-                  console.log("2222");
-                  btn2.setAttribute("style", "fill:rgb(0,0,0) !important");
-                }
-              }, 2000);
-            }, //biale E
-            200
-          );
+          btn1.setAttribute("style", "fill:rgb(255,255,255) !important");
+          setTimeout(() => {
+            btn1.setAttribute("style", "fill:rgb(255,0,0) !important");
+            btn2.setAttribute("style", "fill:rgb(81, 98, 247) !important");
+            setTimeout(() => {
+              if (btn1.classList.contains("white")) {
+                console.log("OOO");
+                btn1.setAttribute("style", "fill:rgb(255,255,255) !important");
+              } else {
+                console.log("hgafshf");
+                btn1.setAttribute("style", "fill:rgb(0,0,0) !important");
+              }
+              if (btn2.classList.contains("white"))
+                btn2.setAttribute("style", "fill:rgb(255,255,255) !important");
+              else {
+                console.log("2222");
+                btn2.setAttribute("style", "fill:rgb(0,0,0) !important");
+              }
+            }, 2000);
+          }, 200);
         }, 1000);
       }, 1000);
     }
-    // setTimeout(()=>{ btn1.setAttribute('style','fill:rgb(255, 255, 255) !important');
-    // btn2.setAttribute('style','fill:rgb(0, 0, 0) !important');}, 2000);
-
-    // setTimeout(() => {  btn2.setAttribute('style','fill:rgb(255, 255, 255) !important'); }, 2000);
-    // btn1.setAttribute('style','fill:rgb(0, 0, 0) !important');
-    // btn2.setAttribute('style','fill:rgb(0, 0, 0) !important');
-    //setTimeout(() => {  btn1.setAttribute('style','fill:rgb(255, 255, 255) !important');  btn2.setAttribute('style','fill:rgb(255, 255, 255) !important'); }, 5000);
   }
 };
 </script>
 <style scoped>
 #ansB {
-  height: 400px;
-  /*display:flex;*/
+  min-height: 110vh;
   align-items: center;
   flex-direction: column;
   align-items: center;
-  /*display: none;*/
   width: 80%;
   display: flex;
 }
@@ -119,5 +101,11 @@ svg#svg8 {
 }
 rect#rect3850 {
   fill: rgb(185, 0, 0) !important;
+}
+@media (max-width: 700px) {
+  #ansB {
+    min-height: 60vh;
+    margin-bottom: 20px;
+  }
 }
 </style>

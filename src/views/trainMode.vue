@@ -6,34 +6,34 @@
         imageLink="covers/I1.png"
         destination="modeSite"
         class="col-12 col-lg-4 col-sm-12"
-        innerText="Donec mollis, erat in venenatis dictum, ipsum urna sollicitudin lectus, eget luctus erat enim aliquet enim. Nam metus dolor, vestibulum id pretium eu, rutrum eu mauris. "
+        innerText="To begin with, get to know the intervals – the basic distances between sounds.
+         This chapter will help you to learn about the essential theory 
+         about the easiest intervals and remember how them sound. Then you can start doing the exercises."
       ></menuCard>
-      <menuCard
-        title="Note in context chapter 1"
-        imageLink="covers/ftic.png"
-        destination="noteInContext"
-        class="col-12 col-lg-4 col-sm-12"
-        innerText="Donec mollis, erat in venenatis dictum, ipsum urna sollicitudin lectus, eget luctus erat enim aliquet enim. Nam metus dolor, vestibulum id pretium eu, rutrum eu mauris. "
-      ></menuCard>
+
       <menuCard
         title="Interval dictation chapter 1"
         imageLink="covers/I1.png"
         destination="intervalDicSite"
         chapter="I1"
         class="col-12 col-lg-4 col-sm-12"
-        innerText="Donec mollis, erat in venenatis dictum, ipsum urna sollicitudin lectus, eget luctus erat enim aliquet enim. Nam metus dolor, vestibulum id pretium eu, rutrum eu mauris. "
+        innerText="The interval dictation is one of the more advanced task. You will have to recognise a set of intervals and write it down. We have prepared a full transcription of the dictation, so that you could check exactly what has been played."
+      ></menuCard>
+      <menuCard
+        title="Note in context chapter 1"
+        imageLink="covers/ftic.png"
+        destination="noteInContext"
+        class="col-12 col-lg-4 col-sm-12"
+        innerText="Note in context is a perfect exercise whereby you can learn how to identify various degrees of consonance.
+         Listen to the example, and then try to recognise which degree of a triad has been played."
       ></menuCard>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-//import mainBanner from "../components/Banner.vue";
 import menuCard from "../components/menuCard.vue";
-//import firebase from "@/firebase/init"
 import db from "@/firebase/init";
-//import VueFire from "VueFire"
 export default {
   name: "trainMode",
   components: {
@@ -58,7 +58,13 @@ export default {
   justify-content: space-around;
   align-items: center;
   height: 88vh;
+
   background-color: rgba(255, 255, 255, 0.7);
+}
+.menuCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 700px) {
   .row {
@@ -74,6 +80,19 @@ export default {
   }
   #main {
     height: 100%;
+    margin-top: 3vh;
+  }
+}
+@media (max-width: 800px) and (orientation: landscape) {
+  #main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 450vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    background-color: rgba(255, 255, 255, 0.7);
   }
 }
 </style>

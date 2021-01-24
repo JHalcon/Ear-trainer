@@ -1,13 +1,13 @@
 <template v-if="triadExVisibility" :key="updateBox">
   <div id="TriadBox" class="container p-2">
     <div class="innerContainer">
-      <div class="qbox" v-for="e in exerTest.slice(a, b)" :key="e.id">
+      <div class="qbox" v-for="e in ext.slice(a, b)" :key="e.id">
         <div id="audio" class="player-wrapper"></div>
         <h2>{{ e.text }}</h2>
         <audio id="id1" v-bind:src="e.file"></audio>
         <p id="titleSongE">{{ e.file }}</p>
-        <button v-on:click="opop" class=" btn btn-dark">Play</button>
-        <span > {{ qid }} {{ e.qid }}</span>
+        <button v-on:click="play" class=" btn btn-dark mt-2">Play</button>
+        <span class="invisible"> {{ qid }} {{ e.qid }}</span>
         <button
           class="btn btn-primary m-2 ansBtn"
           v-on:click="selectAnswer"
@@ -20,14 +20,14 @@
           v-on:click="selectAnswer"
           value="b"
         >
-         {{ e.b }}
+          {{ e.b }}
         </button>
         <button
           class="btn btn-primary m-2 ansBtn"
           v-on:click="selectAnswer"
           value="c"
         >
-         {{ e.c }}
+          {{ e.c }}
         </button>
         <span id="answer">{{ e.correct }}</span>
         <div id="results">
@@ -35,8 +35,7 @@
             >Great! This is correct answer</span
           >
           <span v-if="!correctA" class="textBad"
-            >I'm sorry this is wrong answer. Good answer is
-            {{ e.correct }}</span
+            >I'm sorry this is wrong answer</span
           >
         </div>
       </div>
@@ -58,11 +57,13 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import db from "@/firebase/init";
 
 export default {
   props: ["qid"],
+  created() {
+    this.addEx();
+  },
   computed: {
     triadExVisibility() {
       return this.$store.state.triadExVisibility;
@@ -73,14 +74,14 @@ export default {
     exercises() {
       return this.$store.state.exercises;
     },
-    productsSize() {
-      return this.$store.state.exerTest.length;
-    },
     updateBox() {
       return this.$store.state.updateBox;
     },
     tNumber() {
       return this.$store.state.tNumber;
+    },
+    productsSize() {
+      return this.ext.length;
     }
   },
   name: "triadTestBox",
@@ -156,11 +157,11 @@ export default {
           });
         });
     },
-    created() {
+    /* created() {
       this.Fetchquestions();
-    },
+    },*/
     checkAnswer: function() {
-      console.log(this.selectedAns);
+      //console.log(this.selectedAns);
       let correctAnswer = document.getElementById("answer").innerText;
       console.log("dobra odp" + correctAnswer);
       if (this.selectedAns === correctAnswer) {
@@ -171,7 +172,15 @@ export default {
         this.increaseBA();
       }
     },
-
+    addEx() {
+      console.log("DODAJE" + this.qid);
+      this.ext = [];
+      this.exercises.forEach(element => {
+        if (element.qid == this.qid) {
+          this.ext.push(element);
+        }
+      });
+    },
     checkIfSelected() {
       console.log("sprawdzam czy zaznaczone");
       console.log(this.selecedAns);
@@ -192,6 +201,9 @@ export default {
     },
     nextTriad() {
       console.log("next Triad f" + this.tNumber);
+      console.log("jhgjg" + this.qid);
+      this.addEx();
+      //this.exerFilter(this.$props.qid);
       if (this.tNumber == 1) {
         document.getElementById("endPanel").style.display = "flex";
         document.getElementById("TriadBox").style.display = "none";
@@ -211,47 +223,49 @@ export default {
     },
     nextQuestion() {
       let warDiv = document.getElementById("answerWarning");
-      if (this.checkIfSelected() == true) {
+      warDiv.style.display = "none";
+      //let warDiv = document.getElementById("answerWarning");
+      /*if (this.checkIfSelected() == true) {
         console.log(this.endList);
         this.isSelected = true;
         warDiv.style.display = "none";
-        console.log("next yes");
-        if (this.endList === true) {
-          this.nextTriad();
-        } else {
-          this.a++;
-          this.b++;
-          console.log("hfhgfgf" + this.a);
-          console.log("troll" + this.endList);
-          var that = this;
-          that.checkAnswer();
-          this.iteratorList++;
-          console.log(this.productsSize);
-          let btn = document.getElementById("nextItem");
-          if (this.iteratorList === this.productsSize - 1) {
-            btn.innerHTML = "Next triad";
-          }
-          if (this.iteratorList === this.productsSize) {
-            this.endList = true;
-            btn.innerHTML = "Play again";
-            this.nextTriad();
-          }
+        console.log("next yes");*/
+      if (this.endList === true) {
+        this.nextTriad();
+      } else {
+        this.a++;
+        this.b++;
+        console.log("hfhgfgf" + this.a);
+        console.log("troll" + this.endList);
+        var that = this;
+        that.checkAnswer();
+        this.iteratorList++;
+        console.log(this.productsSize);
+        let btn = document.getElementById("nextItem");
+        if (this.iteratorList === this.productsSize - 1) {
+          btn.innerHTML = "Next triad";
         }
-        this.isSelected = false;
+        if (this.iteratorList === this.productsSize) {
+          this.endList = true;
+          btn.innerHTML = "Play again";
+          this.nextTriad();
+        }
+      }
+      /* this.isSelected = false;
+      } else {
+        warDiv.style.display = "block";
+      }*/
+    },
+    checkA() {
+      let warDiv = document.getElementById("answerWarning");
+      if (this.checkIfSelected() == true) {
+        document.getElementById("results").style.display = "flex";
+        warDiv.style.display = "none";
       } else {
         warDiv.style.display = "block";
       }
     },
-    checkA() {
-      let warDiv = document.getElementById("answerWarning");
-      if(this.checkIfSelected() == true) {
-        
-      document.getElementById("results").style.display = "flex";
-      }else{
-warDiv.style.display = "block";
-      }
-    },
-    opop() {
+    play() {
       let audio1 = document.getElementById("titleSongE").textContent;
       console.log(audio1);
       let aud = new Audio(audio1);
@@ -271,13 +285,15 @@ warDiv.style.display = "block";
   align-items: center;
   margin-top: 40px;
 }
+.textBad {
+  color: red;
+}
 span {
   display: flex;
   font-size: 20px;
 }
 .buttons {
   background-color: darkgray;
-  width: 80%;
   margin: auto;
   box-sizing: border-box;
   padding: 20px;
@@ -296,7 +312,7 @@ span #answer {
 #TriadBox {
   align-items: center;
   /*width: 80%;*/
-  width:100%;
+  width: 100%;
   margin: none;
   // display:none;
 }
@@ -331,23 +347,24 @@ span #answer {
     text-align: center;
     margin-bottom: 10%;
   }
-  .textGood{
-    color:green;
+  .textGood {
+    color: green;
   }
-  .textBad{
-    color:red;
+  .textBad {
+    color: red;
+    font-style: bold;
   }
   span {
     font-size: 1.2em;
   }
   .qbox {
     margin-bottom: 3vh;
-    width:100%;
+    width: 100%;
   }
   #TriadBox {
     width: 100%;
   }
-  .buttons{
+  .buttons {
     width: 100%;
   }
 }
@@ -356,7 +373,6 @@ span #answer {
   #main {
     color: red;
     flex-wrap: wrap;
-    
   }
   .qbox {
     margin-bottom: 3vh;

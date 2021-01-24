@@ -19,7 +19,7 @@
           $router.push({
             name: destination,
             params: {
-              chapterMode: chapter // or anything you want
+              chapterMode: chapter 
             }
           })
         "
@@ -36,8 +36,6 @@ export default {
   props: ["title", "imageLink", "destination", "chapter", "innerText"]
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 router-link {
   color: white;

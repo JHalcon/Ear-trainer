@@ -1,18 +1,17 @@
 <template>
   <div id="prl1" class="container p-2">
+    <div id="str">
+      <h3 class="text-center white-font ">TEST LEVEL 1</h3>
+    </div>
     <div class="innerContainer">
-      <h3 class="text-center white-font mb-4" >Level I test</h3>
       <div
         class="qbox"
         v-for="product in products.slice(a, b)"
         :key="product.id"
       >
-        <h4 class="question">{{ product.text }}</h4>
-        <div id="audio" class="player-wrapper">
-          <!--	<audio-player file='product.file'></audio-player>-->
-        </div>
+        <h4 class="question mb-3">{{ product.text }}</h4>
+        <div id="audio" class="player-wrapper"></div>
         <audioPlayerbtn v-bind:fileName="product.file" />
-        <!-- <audio id="id1" v-bind:src="product.file"> </audio><p id="titleSong">{{ product.file }}</p> <button v-on:click="opop" class="btn btn-primary">Play</button>-->
         <button
           class="btn btn-primary m-2 ansBtn"
           v-on:click="selectAnswer"
@@ -37,11 +36,18 @@
         <span id="answer">{{ product.correct }}</span>
       </div>
       <div id="gameResoult" v-if="endList">
-        <h2>Your test resoults:</h2>
+        <h3 class="mb-3">Your test resoults:</h3>
         <span class="ga-font">Good answers: {{ goodA }}</span>
         <span class="ba-font">Bad answers: {{ badA }}</span>
       </div>
       <div class="buttons" id="testBtnBox">
+        <button
+          class="btn btn-light"
+          v-show="backBtn"
+          @click="$router.push('/')"
+        >
+          Back to chapter menu
+        </button>
         <button id="nextItem" class="btn btn-dark" v-on:click="nextQuestion">
           Next
         </button>
@@ -81,7 +87,8 @@ export default {
       endList: false,
       iteratorList: 0,
       selectedAns: "a",
-      isSelected: false
+      isSelected: false,
+      backBtn: false
     };
   },
   methods: {
@@ -122,6 +129,10 @@ export default {
         this.increaseBA();
       }
     },
+    backToMenu() {
+      this.resetGame();
+      //router.push('/train');
+    },
     checkIfSelected() {
       console.log("sprawdzam czy zaznaczone");
       console.log(this.selecedAns);
@@ -129,7 +140,7 @@ export default {
       else return true;
     },
     resetGame() {
-      console.log("reset game");
+      console.log("reset game now");
       this.a = 0;
       this.b = 1;
       this.endList = false;
@@ -146,6 +157,8 @@ export default {
 
       if (this.endList === true) {
         this.resetGame();
+        this.backBtn = false;
+        document.getElementById("testBtnBox").style.justifyContent = "flex-end";
       } else {
         if (this.checkIfSelected() == true) {
           this.isSelected = true;
@@ -163,6 +176,10 @@ export default {
           if (this.iteratorList === this.productsSize) {
             this.endList = true;
             btn.innerHTML = "Play again";
+            document.getElementById("testBtnBox").style.justifyContent =
+              "space-between";
+            this.backBtn = true;
+
             document.getElementById("answerWarning").style.display = "none";
           }
         } else {
@@ -172,15 +189,35 @@ export default {
       }
     },
     opop() {
-      // console.log(text);
       let audio1 = document.getElementById("titleSong").textContent;
       let aud = new Audio(audio1);
       aud.play();
     }
+  },
+  mounted() {
+    console.log("test mouned");
+    this.resetGame();
   }
 };
 </script>
 <style lang="scss" scoped>
+#str {
+  margin-top: 5vh;
+  width: 100%;
+  background-color: cornflowerblue;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.question {
+  text-align: center;
+}
+#str > h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .qbox {
   display: flex;
   flex-direction: column;
@@ -204,7 +241,6 @@ span {
 }
 .buttons {
   background-color: darkgray;
-  //width: 80%;
   margin: auto;
   box-sizing: border-box;
   padding: 20px;
@@ -214,26 +250,31 @@ span {
 span #answer {
   display: hidden;
 }
-#testBtnBox {
-  // margin-top:20vh;
-}
 #gameResoult {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 6vh;
   margin-bottom: 10vh;
 }
 #prl1 {
   background-color: rgba(255, 255, 255, 0.7);
   height: 84vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .innerContainer {
   width: 100%;
-  //padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vh;
+}
+h4 {
+  font-weight: bold;
 }
 #answer {
   display: none;
@@ -246,5 +287,43 @@ span #answer {
 }
 .active {
   background-color: gray !important;
+}
+
+@media (max-width: 700px) {
+  #str {
+    height: 10vh;
+    margin-bottom: 0%;
+  }
+  #prl1 {
+    background-color: rgba(255, 255, 255, 0.7);
+    min-height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .qbox {
+    margin-top: 0;
+  }
+}
+@media (max-width: 800px) and (orientation: landscape) {
+  #prl1 {
+    min-height: 90vh;
+    margin-bottom: 2vh;
+  }
+  #str {
+    height: 20vh;
+  }
+  #prl1 {
+    background-color: rgba(255, 255, 255, 0.7);
+    min-height: 160vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .qbox {
+    margin-top: 0;
+  }
 }
 </style>

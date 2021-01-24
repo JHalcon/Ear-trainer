@@ -33,8 +33,10 @@ export default new Vuex.Store({
     aud: new Audio("plik.mp3"),
     exerTest: [],
     isStarted: false,
-    ifHelp:false,
-    CP:true,
+    ifHelp: false,
+    CP: true,
+    IPP:true,
+    CPP:false
   },
   actions: {},
 
@@ -42,8 +44,22 @@ export default new Vuex.Store({
     TEtrue(state) {
       state.triadExVisibility = true;
     },
-    changeCP(state){
-    state.CP = !state.CP;
+    resetIPP(state){
+      state.IPP = true;
+    },
+    resetCPP(state){
+      state.CPP = false;
+     // document.getElementsByClassName("mc").style.opacity = "0%";
+      console.log("shgs");
+    },
+    changeIPP(state) {
+      state.IPP = !state.IPP;
+    },
+    changeCPP(state) {
+      state.CPP = !state.CPP;
+    },
+    changeCP(state) {
+      state.CP = !state.CP;
     },
     ifHelpChange(state) {
       state.ifHelp = !state.ifHelp;
@@ -77,11 +93,12 @@ export default new Vuex.Store({
       state.updateBox++;
       console.log("BOX");
     },
-    exerFilter(state) {
+    exerFilter(state, qqid) {
+      console.log("2 skladnik" + qqid);
       state.exerTest = [];
       state.exercises.forEach(id => {
-        console.log(id["qid"]);
-        if (id["qid"] === "emin") {
+        console.log("pierwszy sklądnik" + id["qid"]);
+        if (id["qid"] === qqid) {
           state.exerTest.push(id);
           console.log("yes");
         }

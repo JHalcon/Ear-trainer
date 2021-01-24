@@ -5,44 +5,35 @@
         <h1>Ear Trainer</h1>
         <div class="bImg">
           <svg
-            version="1.1"
+            viewBox="0 0 35 36"
+            fill="none"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 477.216 477.216"
-            style="enable-background:new 0 0 477.216 477.216;"
-            xml:space="preserve"
           >
-            <g>
-              <path
-                d="M453.858,105.116v-91.6c0-4.3-2.1-8.4-5.5-10.9c-3.5-2.5-8-3.3-12.1-2l-272.9,86.7c-5.6,1.8-9.4,7-9.4,12.9v91.7v0.1v175.3
-		c-14.3-9.9-32.6-15.3-51.8-15.3c-20.3,0-39.6,6.1-54.3,17.1c-15.8,11.9-24.5,28-24.5,45.5s8.7,33.6,24.5,45.5
-		c14.7,11,33.9,17.1,54.3,17.1s39.6-6.1,54.3-17.1c15.8-11.9,24.5-28,24.5-45.5v-212.8l245.9-78.2v156.6
-		c-14.3-9.9-32.6-15.3-51.8-15.3c-20.3,0-39.6,6.1-54.3,17.1c-15.8,11.9-24.5,28-24.5,45.5s8.7,33.6,24.5,45.5
-		c14.7,11,33.9,17.1,54.3,17.1s39.6-6.1,54.3-17.1c15.8-11.9,24.5-28,24.5-45.5v-222.3
-		C453.858,105.116,453.858,105.116,453.858,105.116z M102.158,450.216c-28.1,0-51.8-16.3-51.8-35.6c0-19.3,23.7-35.6,51.8-35.6
-		s51.8,16.3,51.8,35.6C153.958,434.016,130.258,450.216,102.158,450.216z M180.958,173.416v-63.4l245.9-78.1v63.4L180.958,173.416z
-		 M375.158,363.116c-28.1,0-51.8-16.3-51.8-35.6c0-19.3,23.7-35.6,51.8-35.6s51.8,16.3,51.8,35.6
-		C426.858,346.816,403.158,363.116,375.158,363.116z"
-              />
-            </g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
+            <path
+              d="M8.88115 34.5638C12.5488 34.1566 15.2417 31.3013 14.8959 28.1864C14.55 25.0715 11.2964 22.8765 7.62873 23.2837C3.96104 23.6909 1.26816 26.5462 1.61401 29.6611C1.95985 32.776 5.21347 34.971 8.88115 34.5638Z"
+              fill="black"
+            />
+            <path
+              d="M28.2785 31.9322C31.8788 31.1229 34.2403 27.988 33.5529 24.9302C32.8655 21.8724 29.3896 20.0497 25.7893 20.8591C22.1889 21.6685 19.8274 24.8034 20.5148 27.8611C21.2022 30.9189 24.6781 32.7416 28.2785 31.9322Z"
+              fill="black"
+            />
+            <path
+              d="M14.8959 8.20427H12.061V28.1864H14.8959V8.20427Z"
+              fill="black"
+            />
+            <path
+              d="M33.6518 8.07405H30.8406V26.1347H33.6518V8.07405Z"
+              fill="black"
+            />
+            <path
+              d="M12.4429 3.42628L12.5502 10.715L33.1535 8.22923L33.1638 0.657043L12.4429 3.42628Z"
+              fill="black"
+              stroke="black"
+              stroke-width="0.997742"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
         </div>
       </div>
@@ -52,11 +43,45 @@
           viewBox="0 0 96 88"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          v-on:click="ifhmenu = !ifhmenu"
+          v-on:click="menuH"
+          v-show="ifnum"
         >
           <rect x="8" y="12" width="80" height="11" rx="5.5" fill="black" />
           <rect x="8" y="38" width="80" height="11" rx="5.5" fill="black" />
           <rect x="8" y="64" width="80" height="11" rx="5.5" fill="black" />
+        </svg>
+
+        <svg
+          width="64"
+          height="64"
+          v-show="!ifnum"
+          v-on:click="menuH"
+          id="ex"
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="Group 1">
+            <rect
+              id="Rectangle 4"
+              x="7.8649"
+              width="80"
+              height="11"
+              rx="5.5"
+              transform="rotate(45.6425 7.8649 0)"
+              fill="black"
+            />
+            <rect
+              id="Rectangle 5"
+              x="63.1107"
+              y="6.58189"
+              width="80"
+              height="11"
+              rx="5.5"
+              transform="rotate(133.572 63.1107 6.58189)"
+              fill="black"
+            />
+          </g>
         </svg>
       </div>
 
@@ -159,7 +184,8 @@ export default {
 
   data() {
     return {
-      ifhmenu: false
+      ifhmenu: false,
+      ifnum: true
     };
   },
   computed: {
@@ -173,6 +199,10 @@ export default {
   methods: {
     ifHelpChange() {
       this.$store.commit("ifHelpChange");
+    },
+    menuH() {
+      this.ifhmenu = !this.ifhmenu;
+      this.ifnum = !this.ifnum;
     }
   }
 };
@@ -196,18 +226,13 @@ export default {
 .bImg {
   width: 40px;
   height: 40px;
+  padding-bottom: 2px;
+  margin-left: 4px;
+  margin-bottom: 2px;
 }
-
-/*
-.bImg3 {
-  width: 50px;
-  height: 50px;
+#Capa_1 {
+  height: 4.5vh;
 }
-.bImg2 {
-  width: 50px;
-  height: 60px;
-}
-*/
 #arrow {
   height: 6.3vh;
   margin-right: 18px;
@@ -244,10 +269,14 @@ export default {
   box-sizing: border-box !important;
 }
 
-
-@media (max-width: 640px) {
+@media (max-width: 850px) {
   #Capa_1 {
-    height: 80%;
+    height: 85%;
+  }
+  .bImg {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding-top: 1px;
   }
   h1 {
     height: 60%;
@@ -259,6 +288,9 @@ export default {
   }
   .right {
     display: none;
+  }
+  svg#ex {
+    height: 5vh;
   }
   .small_right {
     display: flex;
@@ -297,8 +329,11 @@ export default {
     color: black;
     font-weight: bold;
   }
+  .menuItem > span {
+    font-size: 1.3em !important;
+  }
 }
-@media (max-width: 700px) and (orientation: landscape) {
+@media (max-width: 850px) and (orientation: landscape) {
   #mainBanner {
     height: 20vh;
   }
@@ -307,6 +342,9 @@ export default {
   }
   #hMenu {
     height: 30vh;
+  }
+  svg#ex {
+    height: 80%;
   }
 }
 </style>

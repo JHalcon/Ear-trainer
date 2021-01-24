@@ -12,7 +12,7 @@
         v-bind:SN="triad.secondNote"
         v-bind:TN="triad.thirdNote"
       />
-      <button id="NS" class="btn btn-secondary mt-2" @click="toGame(triad.qid)">
+      <button id="NS" class="btn btn-secondary mt-4" @click="toGame(triad.qid)">
         Next step
       </button>
       <triadTestBox v-bind:qid="triad.qid" />
@@ -21,10 +21,22 @@
         <button class="btn btn-primary mb-3" v-on:click="resetChapter">
           Play again
         </button>
-        <button class="btn btn-secondary mb-3 " @click="$router.push('/train'); resetChapter">
+        <button
+          class="btn btn-secondary mb-3 "
+          @click="
+            $router.push('/train');
+            resetChapter;
+          "
+        >
           Back to the chapter menu
         </button>
-        <button class="btn btn-light " @click="$router.push('/'); resetChapter">
+        <button
+          class="btn btn-light "
+          @click="
+            $router.push('/');
+            resetChapter;
+          "
+        >
           Back to the main menu
         </button>
       </div>
@@ -36,8 +48,8 @@ import keyboardBox from "../components/keyboardBox.vue";
 import triadTestBox from "../components/triadTestBox.vue";
 
 export default {
-  created(){
-this.resetChapter();
+  created() {
+    this.resetChapter();
   },
   components: {
     keyboardBox,
@@ -45,8 +57,6 @@ this.resetChapter();
   },
   data() {
     return {
-      //c:0,
-      //d:1,
       name: "noteInContext",
       endOfMode: false
     };
@@ -114,7 +124,7 @@ this.resetChapter();
       document.getElementById("answerWarning").style.display = "none";
     },
     toGame(a) {
-      console.log("to Game jedzie"+a);
+      console.log("to Game jedzie" + a);
       document.getElementById("keyBox").style.display = "none";
       document.getElementById("NS").style.display = "none";
       document.getElementById("triadInfo").style.display = "none";
@@ -122,7 +132,6 @@ this.resetChapter();
       document.getElementById("TriadBox").style.display = "flex";
       document.getElementById("sectionTitle").style.display = "none";
       console.log(this.exercisesT);
-      this.exerFilter();
       console.log(this.triadExVisibility);
       this.UpdateBox();
     },
@@ -152,7 +161,6 @@ this.resetChapter();
             this.endList = true;
             btn.innerHTML = "Play again";
             document.getElementById("answerWarning").style.display = "none";
-            //this.showResoult();
           }
         } else {
           warDiv.style.display = "block";
@@ -166,9 +174,9 @@ this.resetChapter();
       this.dReset();
       this.tNumberReset();
     },
-    updated(){
+    updated() {
       console.log("reloaod");
-this.resetChapter();
+      this.resetChapter();
     },
     playInterval(first, second) {
       this.playMusic();
@@ -178,15 +186,15 @@ this.resetChapter();
       let btn2 = document.getElementById(second);
       let btn1 = document.getElementById(first);
       console.log(btn1);
-      btn1.setAttribute("style", "fill:rgb(255, 0, 0) !important"); //czarne c
+      btn1.setAttribute("style", "fill:rgb(255, 0, 0) !important");
       setTimeout(() => {
         btn1.setAttribute("style", "fill:rgb(255, 255, 255) !important");
-        btn2.setAttribute("style", "fill:rgb(81, 98, 247) !important"); //biale c
+        btn2.setAttribute("style", "fill:rgb(81, 98, 247) !important");
         setTimeout(() => {
           if (btn2.classList.contains("white"))
             btn2.setAttribute("style", "fill:rgb(255,255,255) !important");
           else btn2.setAttribute("style", "fill:rgb(0,0,0) !important");
-          btn1.setAttribute("style", "fill:rgb(255,255,255) !important"); // rozowe E
+          btn1.setAttribute("style", "fill:rgb(255,255,255) !important"); 
           setTimeout(() => {
             btn1.setAttribute("style", "fill:rgb(255,0,0) !important");
             btn2.setAttribute("style", "fill:rgb(81, 98, 247) !important");
@@ -228,10 +236,8 @@ img {
   align-items: center;
   margin-top: 2vh;
   justify-content: center;
-  /*width: 80%;*/
 }
 #keyBox {
-  /*display:flex;*/
   align-items: center;
   flex-direction: column;
   align-items: center;
@@ -245,8 +251,7 @@ div {
 #contentBox {
   display: flex;
   flex-direction: column;
-  /*width: 80vw;*/
-  width:100%;
+  width: 100%;
   justify-content: center;
 }
 .invisible {
@@ -292,16 +297,20 @@ h3 {
   button {
     height: 90%;
     font-size: 1em;
-    
   }
-  button.btn{
-margin-bottom: 5vh;
+  h3#sectionTitle {
+    margin-bottom: 2px !important;
+    text-align: center;
+  }
+  button.btn {
+    margin-bottom: 5vh;
+    text-align: center;
   }
 }
-@media (max-width: 700px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
   #main {
-  height: 140vh;
-  margin-bottom:3vh;
-}
+    min-height: 160vh;
+    margin-bottom: 3vh;
+  }
 }
 </style>

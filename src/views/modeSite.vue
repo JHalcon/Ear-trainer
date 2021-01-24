@@ -1,13 +1,12 @@
 <template>
   <div class="container">
-    <!-- <mainBanner></mainBanner>-->
     <div id="main" class="row">
       <menuCard
         title="Learn material"
         imageLink="covers/LI.png"
         destination="ILBox"
         class=" mc col-12 col-lg-6 col-sm-12"
-        innerText="Donec mollis, erat in venenatis dictum, ipsum urna sollicitudin lectus, eget luctus erat enim aliquet enim. Nam metus dolor, vestibulum id pretium eu, rutrum eu mauris. "
+        innerText="Learn the most important information about the intervals. Listen to the examples that will make it easier for you to memorize the consonance. This will enable you to do the practical exercises."
       ></menuCard>
       <menuCard
         title="Train intervals"
@@ -15,23 +14,18 @@
         destination="trainModeTest"
         chapter="I1"
         class=" mc col-12 col-lg-6 col-sm-12"
-        innerText="Donec mollis, erat in venenatis dictum, ipsum urna sollicitudin lectus, eget luctus erat enim aliquet enim. Nam metus dolor, vestibulum id pretium eu, rutrum eu mauris. "
+        innerText="Try to recognise the played interval. In each example there are 3 answer options but don’t worry, you can always use the virtual keyboard, which will play the sounds for you – this will certainly be helpful! "
       ></menuCard>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-//import mainBanner from "../components/Banner.vue";
 import menuCard from "../components/menuCard.vue";
-//import firebase from "@/firebase/init"
 import db from "@/firebase/init";
-//import VueFire from "VueFire"
 export default {
   name: "modeSite",
   components: {
-    // mainBanner,
     menuCard
   },
   methods: {
@@ -50,7 +44,6 @@ export default {
 #main {
   display: flex;
   flex-direction: row;
-  /* padding-top: 10vh;*/
   justify-content: space-around;
   align-items: center;
   height: 88vh;
@@ -68,9 +61,20 @@ export default {
   }
   #main {
     height: 95%;
+    margin-top: 3vh;
+    padding-bottom: 2vh;
   }
   .menuCard {
     margin-top: 30px !important;
+  }
+}
+@media (max-width: 800px) and (orientation: landscape) {
+  #main {
+    height: 100%;
+    margin-top: 3vh;
+    padding-bottom: 2vh;
+    padding-top: 3vh;
+    margin-bottom: 3vh;
   }
 }
 </style>
