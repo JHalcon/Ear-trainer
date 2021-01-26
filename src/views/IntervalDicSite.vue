@@ -430,6 +430,7 @@ h3 {
   #prev {
     background-color: cornflowerblue;
     text-align: center;
+    width:100%;
   }
   #main {
     min-height: 100vh;

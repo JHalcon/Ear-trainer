@@ -29,4 +29,11 @@ export default {
 audio {
   height: 40px;
 }
+.pl{
+  width:100%;
+  display:flex;
+  justify-content: center;
+}
+
+
 </style>

@@ -157,8 +157,8 @@ svg#svg8 {
   padding: 5vh;
 }
 audio#player {
-  height: 40px !important;
-  width: 200px !important;
+  height: 20px !important;
+  //width: 200px !important;
 }
 #summary {
   display: none;
